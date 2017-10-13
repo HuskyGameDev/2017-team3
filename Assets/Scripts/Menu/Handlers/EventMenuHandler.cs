@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class EventMenuHandler : MonoBehaviour {
     bool showWindow = false;
     public Popup popupmenu;
+    Clock clock;
+    Player player;
     // Use this for initialization
     void Start () {
-		
-	}
+        clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
+        player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,11 +33,13 @@ public class EventMenuHandler : MonoBehaviour {
     }
     public void back()
     {
-        //TODO Save player data
+        Destroy(player);
+        Destroy(clock);
         SceneManager.LoadScene(0);
     }
     public void NextDay()
     {
+        clock.IncrementDay(player.wentToClass);
         SceneManager.LoadScene(2);
     }
 
