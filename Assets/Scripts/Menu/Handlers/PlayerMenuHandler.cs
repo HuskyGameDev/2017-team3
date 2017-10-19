@@ -26,6 +26,7 @@ public class PlayerMenuHandler : MonoBehaviour {
     }
     public void back()
     {
+        //since these don't destroy on their own, we need to destroy them when they aren't being used
         Destroy(player);
         Destroy(clock);
         SceneManager.LoadScene(0);
