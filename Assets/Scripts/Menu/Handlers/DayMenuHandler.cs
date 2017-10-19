@@ -41,6 +41,7 @@ public class DayMenuHandler : MonoBehaviour {
 	}
     public void Back()
     {
+        //since these don't destroy on their own, we need to destroy them when they aren't being used
         Destroy(player);
         Destroy(clock);
         SceneManager.LoadScene(0);
@@ -53,12 +54,14 @@ public class DayMenuHandler : MonoBehaviour {
     }
     public void PerformTask(int i)
     {
+        //if the player is completely exausted, stop them from doing anything
         if (player.exhaustion>=100)
         {
             chosenTask.text = "No More Energy";
             return;
         }
         //TODO Stop people from napping after midnight
+        //determine what button was clicked
         switch (i)
         {
             case 1:
@@ -89,7 +92,9 @@ public class DayMenuHandler : MonoBehaviour {
                 chosenTask.text = "This shouldn't happen";
                 break;
         }
+        //each action takes 1 hour
         clock.ChangeHour(1);
+        //after midnight, actions take more and more energy to perform
         int mult = 1;
         if (startDay < clock.day)
         {
