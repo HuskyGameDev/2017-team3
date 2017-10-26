@@ -8,10 +8,13 @@ public class PlayerMenuHandler : MonoBehaviour {
     public Text Selection;
     public InputField nameInput;
     public Text namefield;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    Clock clock;
+    Player player;
+    // Use this for initialization
+    void Start () {
+        clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
+        player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,11 +26,14 @@ public class PlayerMenuHandler : MonoBehaviour {
     }
     public void back()
     {
-        //TODO Save player data
+        //since these don't destroy on their own, we need to destroy them when they aren't being used
+        Destroy(player);
+        Destroy(clock);
         SceneManager.LoadScene(0);
     }
     public void StartGame()
     {
+        player.PlayerName = nameInput.text;
         SceneManager.LoadScene(2);
     }
 }

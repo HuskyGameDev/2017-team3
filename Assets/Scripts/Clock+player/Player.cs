@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public string name;
     
     //stats
     public int stress;
     public int homework;
     public int exhaustion;
     public float money;
-
+    public bool wentToClass;
+    public string PlayerName;
 
     //attributes
     protected uint strength;
@@ -19,7 +19,20 @@ public class Player : MonoBehaviour {
     protected uint wisdom;
     protected uint intelligence;
     protected uint charisma;
+    static Player instance;
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
 
+        if (instance == null || GameObject.FindGameObjectWithTag("PlayerStats") == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
+    }
 
     // Use this for initialization
     void Start () {
@@ -31,12 +44,12 @@ public class Player : MonoBehaviour {
 		
 	}
 
-    void Die()
+    public void Die()
     {
         //if the character's stats result in death, do that stuff here
     }
 
-    void StressMod(int amount)
+   public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
         stress = stress + amount;
@@ -46,7 +59,7 @@ public class Player : MonoBehaviour {
 
     }
 
-    void HomeworkMod(int amount)
+    public void HomeworkMod(int amount)
     {
         //positive amount to increase homework, negative to decrease
         homework = homework + amount;
@@ -56,7 +69,7 @@ public class Player : MonoBehaviour {
 
     }
 
-    void ExhaustionMod(int amount)
+    public void ExhaustionMod(int amount)
     {
         //positive amount to increase exhaustion, negative to decrease
         exhaustion = exhaustion + amount;
@@ -66,7 +79,7 @@ public class Player : MonoBehaviour {
 
     }
 
-    void MoneyMod(int amount)
+    public void MoneyMod(int amount)
     {
         //positive amount to increase homework, negative to decrease
         money = money + amount;
