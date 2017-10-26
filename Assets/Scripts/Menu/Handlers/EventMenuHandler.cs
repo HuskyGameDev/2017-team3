@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EventMenuHandler : MonoBehaviour {
     bool showWindow = false;
     public Popup popupmenu;
+    public Button choice1;
+    public Button choice2;
+    public Button choice3;
+    public Button choice4;
+    public Text eventDescription;
+    public Text choiceDescription;
     Clock clock;
     Player player;
     // Use this for initialization

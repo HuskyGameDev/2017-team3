@@ -70,7 +70,7 @@ public class Clock : MonoBehaviour {
             //start day at 6 am
             time = startDay;
         }
-        day = day++;
+        day++;
         
     }
 }
