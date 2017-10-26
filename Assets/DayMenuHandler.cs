@@ -44,13 +44,13 @@ public class DayMenuHandler : MonoBehaviour {
                 chosenTask.text = "Study:" + i.ToString();
                 break;
             case 6:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Play video games:" + i.ToString();
                 break;
             case 7:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Do nothing:" + i.ToString();
                 break;
             case 8:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Take a nap:" + i.ToString();
                 break;
             default:
                 chosenTask.text = "This shouldn't happen";
