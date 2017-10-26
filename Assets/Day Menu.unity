@@ -419,7 +419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 1
+  m_Text: Go to Class
 --- !u!222 &284105723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 6
+  m_Text: Play video games
 --- !u!222 &619629787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -864,7 +864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e509bbd52cd7d094685d6df454d62d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenTask: {fileID: 750314237}
 --- !u!1 &759690236
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +931,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 5
+  m_Text: Study
 --- !u!222 &759690239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1217,7 +1216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 321, y: 126.4}
+  m_AnchoredPosition: {x: 649, y: 229}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081471461
@@ -1738,7 +1737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 3
+  m_Text: Do Homework
 --- !u!222 &1384712263
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1812,7 +1811,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 2
+  m_Text: Skip class
 --- !u!222 &1417559727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2054,7 +2053,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 4
+  m_Text: Go out with friends
 --- !u!222 &1605987858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2326,7 +2325,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 7
+  m_Text: Do nothing
 --- !u!222 &1942091902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2400,7 +2399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Task 8
+  m_Text: Take a nap
 --- !u!222 &1984402769
 CanvasRenderer:
   m_ObjectHideFlags: 0
