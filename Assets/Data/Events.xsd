@@ -1,17 +1,34 @@
 <?xml version="1.0"?>
 <xs:schema>
-<xs:element name="Event">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="Name" type="">
-			<xs:element name="Description" type="">
-			<xs:element name="Thresholds">
-				<xs:complexType>
-				<!--Stat thresholds go here-->
-					<xs:all>
-						
-					</xs:all>
-				</xs:complexType>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="Event"
+				minOccurs="2"
+				maxOccurs="10">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="">
+				<xs:element name="Description" type="">
+				<xs:element name="Thresholds">
+					<xs:complexType>
+					<!--Stat thresholds go here-->
+						<xs:all>
+							<xs:element name="stress" type="" default=""/>
+							<xs:element name="homework" type="" default=""/>
+							<xs:element name="exhaustion" type="" default=""/>
+							<xs:element name="money" type="" default=""/>
+							<xs:element name="strength" type="" default=""/>
+							<xs:element name="dexterity" type="" default=""/>
+							<xs:element name="constitution" type="" default=""/>
+							<xs:element name="intelligence" type="" default=""/>
+							<xs:element name="wisdom" type="" default=""/>
+							<xs:element name="charisma" type="" default=""/>
+						</xs:all>
+					</xs:complexType>
+				<xs:element name="Options">
+					<xs:complexType>
+						<xs:all>
+						</xs:all>
+					</xs:complexType>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>
