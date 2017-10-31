@@ -15,10 +15,11 @@ public class Event {
     uint charisma;
     List<Options> Choices;
     string eventDescription;
+    string eventName;
     int weight;
     List<Event> nextEvents;
 
-    public Event(int s, int h, int e, float m, uint str, uint dex, uint con, uint wis, uint it, uint cha, List<Options> c, string desc, int w)
+    public Event(int s, int h, int e, float m, uint str, uint dex, uint con, uint wis, uint it, uint cha, List<Options> c, string desc, int w, List<Event> n, string name)
     {
         stress = s;
         homework = h;
@@ -33,11 +34,18 @@ public class Event {
         Choices = c;
         eventDescription = desc;
         weight = w;
+        nextEvents = n;
+        eventName = name;
     }
 
     public string getDescription()
     {
         return eventDescription;
+    }
+
+    public string getName()
+    {
+        return eventName;
     }
 
     public int getWeight(Player p)
@@ -58,8 +66,14 @@ public class Event {
         }
         return weight;
     }
+
     public List<Options> eventChosen()
     {
         return Choices;
+    }
+
+    public List<Event> getNextEvents()
+    {
+        return nextEvents;
     }
 }
