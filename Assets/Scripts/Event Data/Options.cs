@@ -10,17 +10,18 @@ public class Options {
     public string text;
     public string name;
 
-    protected uint addstrength;
-    protected uint adddexterity;
-    protected uint addconstitution;
-    protected uint addwisdom;
-    protected uint addintelligence;
-    protected uint addcharisma;
+    protected int addstrength;
+    protected int adddexterity;
+    protected int addconstitution;
+    protected int addwisdom;
+    protected int addintelligence;
+    protected int addcharisma;
     public int addstress;
     public int addhomework;
     public int addexhaustion;
     public float addmoney;
-    public Options(int s, int h, int e, float m, string t, string n, uint str, uint dex, uint con, uint wis, uint it, uint cha, int adds, int addh, int adde, float addm){
+    public Options(int s, int h, int e, float m, int str, int dex, int con, int wis, int it, int cha, int adds, int addh, int adde, float addm, string t, string n)
+    {
         stress = s;
         homework = h;
         exhaustion = e;
