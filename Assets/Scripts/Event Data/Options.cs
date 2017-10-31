@@ -20,7 +20,7 @@ public class Options {
     public int addhomework;
     public int addexhaustion;
     public float addmoney;
-    public Options(uint s, uint h, uint e, float m, string t, string n, int str, int dex, int con, int wis, int it, int cha, int adds, int addh, int adde, float addm){
+    public Options(int s, int h, int e, float m, string t, string n, uint str, uint dex, uint con, uint wis, uint it, uint cha, int adds, int addh, int adde, float addm){
         stress = s;
         homework = h;
         exhaustion = e;
@@ -43,7 +43,7 @@ public class Options {
         bool s = p.stress < stress;
         bool h = p.homework < homework;
         bool e = p.exhaustion < exhaustion;
-        bool m = p.money > moneyp;
+        bool m = p.money > money;
         return s  && h && e && m;
     }
     public void updatePlayer(Player p)
