@@ -65,31 +65,32 @@ public class DayMenuHandler : MonoBehaviour {
         switch (i)
         {
             case 1:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Go to Class:" + i.ToString();  // Calls task to preform the task
                 break;
             case 2:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Skip Class:" + i.ToString();
                 break;
             case 3:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Do Homework:" + i.ToString();
                 break;
             case 4:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Go out with friends:" + i.ToString();
                 break;
             case 5:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Study:" + i.ToString();
                 break;
             case 6:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Play video games:" + i.ToString();
                 break;
             case 7:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Do nothing:" + i.ToString();
                 break;
             case 8:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Take a nap:" + i.ToString();
                 break;
             default:
                 chosenTask.text = "This shouldn't happen";
+                break;
                 break;
         }
         //each action takes 1 hour
