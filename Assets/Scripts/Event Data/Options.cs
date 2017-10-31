@@ -49,6 +49,9 @@ public class Options {
     }
     public void updatePlayer(Player p)
     {
-
+        p.ExhaustionMod(addexhaustion);
+        p.HomeworkMod(addhomework);
+        p.MoneyMod(addmoney);
+        p.StressMod(addstress);
     }
 }
