@@ -38,22 +38,25 @@ public class EventMenuHandler : MonoBehaviour {
             switch (eventOptions.Count)
             {
                 case 4:
-                    choice4.GetComponentInChildren<Text>().text = eventOptions[4].name;
+                    choice4.GetComponentInChildren<Text>().text = eventOptions[3].name;
                     choice4.gameObject.SetActive(true);
+                    choice4.enabled=eventOptions[3].isAvailable(player);
                     goto case 3;
                 case 3:
-                    choice3.GetComponentInChildren<Text>().text = eventOptions[3].name;
+                    choice3.GetComponentInChildren<Text>().text = eventOptions[2].name;
                     choice3.gameObject.SetActive(true);
+                    choice3.enabled = eventOptions[2].isAvailable(player);
                     goto case 2;
                 case 2:
-                    choice2.GetComponentInChildren<Text>().text = eventOptions[2].name;
+                    choice2.GetComponentInChildren<Text>().text = eventOptions[1].name;
                     choice2.gameObject.SetActive(true);
+                    choice2.enabled = eventOptions[1].isAvailable(player);
                     goto case 1;
                 case 1:
-                    choice1.GetComponentInChildren<Text>().text = eventOptions[1].name;
+                    choice1.GetComponentInChildren<Text>().text = eventOptions[0].name;
                     break;
                 default:
-                    choice1.GetComponentInChildren<Text>().text = "ERROR!";
+                    choice1.GetComponentInChildren<Text>().text = "ERROR here!";
                     break;
             }
         }
@@ -85,20 +88,23 @@ public class EventMenuHandler : MonoBehaviour {
             switch (i)
             {
                 case 4:
-                    choiceDescription.text = eventOptions[4].text;
+                    choiceDescription.text = eventOptions[3].text;
                     eventOptions[4].updatePlayer(player);
                     break;
                 case 3:
-                    choiceDescription.text = eventOptions[3].text;
+                    choiceDescription.text = eventOptions[2].text;
+                    eventOptions[3].updatePlayer(player);
                     break;
                 case 2:
-                    choiceDescription.text = eventOptions[2].text;
+                    choiceDescription.text = eventOptions[1].text;
+                    eventOptions[2].updatePlayer(player);
                     break;
                 case 1:
-                    choiceDescription.text = eventOptions[1].text;
+                    choiceDescription.text = eventOptions[0].text;
+                    eventOptions[1].updatePlayer(player);
                     break;
                 default:
-                    choiceDescription.text = "ERROR!";
+                    choiceDescription.text = "ERROR there!";
                     break;
             }
         }

@@ -11,13 +11,12 @@ public class EventSelector {
         {
             return null;
         }
-        Random rnd = new Random();
         int selection = Random.Range(0, choices.Count);
         Event chosen = choices[selection];
         choices.Remove(chosen);
         foreach(Event e in chosen.getNextEvents())
         {
-            choices.Add(e);
+            p.CurrentEvents.Add(e);
         }
         return chosen;
     }
