@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<xs:schema>
+<xs:element name="Event">
+	<xs:complexType>
+	</xs:complexType>
+</xs:schema>
