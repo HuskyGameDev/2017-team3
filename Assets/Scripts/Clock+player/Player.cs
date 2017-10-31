@@ -13,12 +13,12 @@ public class Player : MonoBehaviour {
     public string PlayerName;
 
     //attributes
-    protected uint strength;
-    protected uint dexterity;
-    protected uint constitution;
-    protected uint wisdom;
-    protected uint intelligence;
-    protected uint charisma;
+    public uint strength;
+    public uint dexterity;
+    public uint constitution;
+    public uint wisdom;
+    public uint intelligence;
+    public uint charisma;
     static Player instance;
     void Awake()
     {
