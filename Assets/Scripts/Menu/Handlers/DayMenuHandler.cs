@@ -91,7 +91,6 @@ public class DayMenuHandler : MonoBehaviour {
             default:
                 chosenTask.text = "This shouldn't happen";
                 break;
-                break;
         }
         //each action takes 1 hour
         clock.ChangeHour(1);
