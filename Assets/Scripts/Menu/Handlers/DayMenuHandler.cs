@@ -73,28 +73,64 @@ public class DayMenuHandler : MonoBehaviour {
         switch (i)
         {
             case 1:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Workout";  // Calls task to preform the task
+                if (player.exhaustion >= 55)
+                {
+                    chosenTask.text = "Too tired to workout";
+                }
+                player.ExhaustionMod(10);
+                player.StressMod(-5);
                 break;
             case 2:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Do Job";
+                player.MoneyMod(30);
+                player.ExhaustionMod(15);
                 break;
             case 3:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Do Homework";
+                player.HomeworkMod(-25);
+                player.ExhaustionMod(10);
+                player.StressMod(5);
                 break;
             case 4:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Go out with Friends";
+                if (player.homework > 50)
+                {
+                    chosenTask.text = "Cannot go out with Friends";
+                }
+                player.StressMod(-25);
+                player.ExhaustionMod(10);
                 break;
             case 5:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Study";
+                player.HomeworkMod(-15);
+                player.StressMod(10);
+                player.ExhaustionMod(10);
                 break;
             case 6:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Play Video Games";
+                if (player.homework > 45)
+                {
+                    chosenTask.text = "Cannot play video games";
+                }
+                player.StressMod(-25);
+                player.ExhaustionMod(10);
                 break;
             case 7:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Go Shopping";
+                if (player.money < 25)
+                {
+                    chosenTask.text = "Cannot go shopping";
+                }
+                player.MoneyMod(-25);
+                player.StressMod(-25);
                 break;
             case 8:
-                chosenTask.text = "Performed task:" + i.ToString();
+                chosenTask.text = "Take a Nap";
+                if (clock.day >= 12)
+                {
+                    EndDay();
+                }
                 break;
             default:
                 chosenTask.text = "This shouldn't happen";
