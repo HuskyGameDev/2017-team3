@@ -30,14 +30,22 @@ public class DayMenuHandler : MonoBehaviour {
         
     }
     void Start () {
-		
+        player.homework += 1; //todo decide what homework value this should be
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
-        TempBars.text = "Money: " + player.money + "\n Exhaustion: " + player.exhaustion + "\n Stress: " + player.stress + "\n Homework" + player.homework;
+        TempBars.text = player.PlayerName +"\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
+        if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
+        {
+            SceneManager.LoadScene(4);
+        }
+        if (player.stress > 100)
+        {
+            player.stress = 100;
+        }
 	}
     public void Back()
     {
@@ -99,6 +107,18 @@ public class DayMenuHandler : MonoBehaviour {
         if (startDay < clock.day)
         {
             mult = clock.time;
+        }
+        if(player.stress>50 && player.stress < 75)
+        {
+            mult *= 2;
+        }
+        if (player.stress > 75 && player.stress<100)
+        {
+            mult *= 3;
+        }
+        if (player.stress >= 100)
+        {
+            mult *= 4;
         }
         player.ExhaustionMod(10*mult);
     }

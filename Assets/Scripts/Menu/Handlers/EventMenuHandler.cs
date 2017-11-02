@@ -35,22 +35,78 @@ public class EventMenuHandler : MonoBehaviour {
         {
             eventDescription.text = todaysEvent.getDescription();
             List<Options> eventOptions = todaysEvent.eventChosen();
+            bool[] results;
+            string badStats;
             switch (eventOptions.Count)
             {
                 case 4:
-                    choice4.GetComponentInChildren<Text>().text = eventOptions[3].name;
                     choice4.gameObject.SetActive(true);
-                    choice4.enabled=eventOptions[3].isAvailable(player);
+                    choice4.interactable = eventOptions[3].isAvailable(player);
+                    results = eventOptions[3].missing(player);
+                    badStats = ".";
+                    if (results[0])
+                    {
+                        badStats += " You are too stressed.";
+                    }
+                    if (results[1])
+                    {
+                        badStats += " You have too much homework.";
+                    }
+                    if (results[2])
+                    {
+                        badStats += " You are too tired.";
+                    }
+                    if (results[3])
+                    {
+                        badStats += " You are too broke.";
+                    }
+                    choice4.GetComponentInChildren<Text>().text = eventOptions[3].name + badStats;
                     goto case 3;
                 case 3:
-                    choice3.GetComponentInChildren<Text>().text = eventOptions[2].name;
                     choice3.gameObject.SetActive(true);
-                    choice3.enabled = eventOptions[2].isAvailable(player);
+                    choice3.interactable = eventOptions[2].isAvailable(player);
+                    results = eventOptions[2].missing(player);
+                    badStats = ".";
+                    if (results[0])
+                    {
+                        badStats += " You are too stressed.";
+                    }
+                    if (results[1])
+                    {
+                        badStats += " You have too much homework.";
+                    }
+                    if (results[2])
+                    {
+                        badStats += " You are too tired.";
+                    }
+                    if (results[3])
+                    {
+                        badStats += " You are too broke.";
+                    }
+                    choice3.GetComponentInChildren<Text>().text = eventOptions[2].name + badStats;
                     goto case 2;
                 case 2:
-                    choice2.GetComponentInChildren<Text>().text = eventOptions[1].name;
                     choice2.gameObject.SetActive(true);
-                    choice2.enabled = eventOptions[1].isAvailable(player);
+                    choice2.interactable = eventOptions[1].isAvailable(player);
+                    results = eventOptions[1].missing(player);
+                    badStats = ".";
+                    if (results[0])
+                    {
+                        badStats += " You are too stressed.";
+                    }
+                    if (results[1])
+                    {
+                        badStats += " You have too much homework.";
+                    }
+                    if (results[2])
+                    {
+                        badStats += " You are too tired.";
+                    }
+                    if (results[3])
+                    {
+                        badStats += " You are too broke.";
+                    }
+                    choice2.GetComponentInChildren<Text>().text = eventOptions[1].name + badStats;
                     goto case 1;
                 case 1:
                     choice1.GetComponentInChildren<Text>().text = eventOptions[0].name;
@@ -89,19 +145,19 @@ public class EventMenuHandler : MonoBehaviour {
             {
                 case 4:
                     choiceDescription.text = eventOptions[3].text;
-                    eventOptions[4].updatePlayer(player);
+                    eventOptions[3].updatePlayer(player);
                     break;
                 case 3:
                     choiceDescription.text = eventOptions[2].text;
-                    eventOptions[3].updatePlayer(player);
+                    eventOptions[2].updatePlayer(player);
                     break;
                 case 2:
                     choiceDescription.text = eventOptions[1].text;
-                    eventOptions[2].updatePlayer(player);
+                    eventOptions[1].updatePlayer(player);
                     break;
                 case 1:
                     choiceDescription.text = eventOptions[0].text;
-                    eventOptions[1].updatePlayer(player);
+                    eventOptions[0].updatePlayer(player);
                     break;
                 default:
                     choiceDescription.text = "ERROR there!";
