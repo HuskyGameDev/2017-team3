@@ -18,8 +18,10 @@ public class Event {
     string eventName;
     int weight;
     List<Event> nextEvents;
+    bool start;
+    bool endless;
 
-    public Event(int s, int h, int e, float m, uint str, uint dex, uint con, uint wis, uint it, uint cha, List<Options> c, string desc, int w, List<Event> n, string name)
+    public Event(int s, int h, int e, float m, uint str, uint dex, uint con, uint wis, uint it, uint cha, List<Options> c, string desc, int w, List<Event> n, string name, bool start, bool endless)
     {
         stress = s;
         homework = h;
@@ -36,6 +38,8 @@ public class Event {
         weight = w;
         nextEvents = n;
         eventName = name;
+        this.start = start;
+        this.endless = endless;
     }
 
     public string getDescription()
