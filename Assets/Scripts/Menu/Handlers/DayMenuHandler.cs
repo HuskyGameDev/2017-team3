@@ -100,6 +100,7 @@ public class DayMenuHandler : MonoBehaviour {
                 }
                 player.StressMod(-25);
                 player.ExhaustionMod(10);
+                player.MoneyMod(-5);
                 break;
             case 5:
                 chosenTask.text = "Study";
