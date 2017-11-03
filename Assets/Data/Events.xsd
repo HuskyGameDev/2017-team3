@@ -1,29 +1,18 @@
-<?xml version="1.0"?>
-<xs:schema>
+<?xml version = "1.0"?>
+
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://www.w3.org/2001/XMLSchema/XMLSchema.xsd">
+	
 	<xs:element name="Event"
-				minOccurs="2"
-				maxOccurs="10">
+				minOccurs="0"
+				maxOccurs="unbounded">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Name" type="">
-				<xs:element name="Description" type="">
-				<xs:element name="Thresholds">
-					<xs:complexType>
-					<!--Stat thresholds go here-->
-						<xs:all>
-							<xs:element name="stress" type="" default=""/>
-							<xs:element name="homework" type="" default=""/>
-							<xs:element name="exhaustion" type="" default=""/>
-							<xs:element name="money" type="" default=""/>
-							<xs:element name="strength" type="" default=""/>
-							<xs:element name="dexterity" type="" default=""/>
-							<xs:element name="constitution" type="" default=""/>
-							<xs:element name="intelligence" type="" default=""/>
-							<xs:element name="wisdom" type="" default=""/>
-							<xs:element name="charisma" type="" default=""/>
-						</xs:all>
-					</xs:complexType>
-				<xs:element name="Options">
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="Description" type="xs:string"/>
+				<xs:element name="thresholds" type ="Thresholds"/>
+				<xs:element name="Options"/>
 					<xs:complexType>
 						<xs:all>
 						</xs:all>
@@ -31,4 +20,20 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+	<xs:complexType name = "Thresholds">
+	<!--Stat thresholds go here-->
+		<xs:all>
+			<xs:element name="stress" type="xs:integer" default="0"/>
+			<xs:element name="homework" type="xs:integer" default="0"/>
+			<xs:element name="exhaustion" type="xs:integer" default="0"/>
+			<xs:element name="money" type="xs:decimal" default="0"/>
+			<xs:element name="strength" type="xs:integer" default="0"/>
+			<xs:element name="dexterity" type="xs:integer" default="0"/>
+			<xs:element name="constitution" type="xs:integer" default="0"/>
+			<xs:element name="intelligence" type="xs:integer" default="0"/>
+			<xs:element name="wisdom" type="xs:integer" default="0"/>
+			<xs:element name="charisma" type="xs:integer" default="0"/>
+		</xs:all>
+	</xs:complexType>
 </xs:schema>
