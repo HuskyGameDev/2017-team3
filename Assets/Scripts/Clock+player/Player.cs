@@ -13,12 +13,12 @@ public class Player : MonoBehaviour {
     public string PlayerName;
 
     //attributes
-    public uint strength;
-    public uint dexterity;
-    public uint constitution;
-    public uint wisdom;
-    public uint intelligence;
-    public uint charisma;
+    public int strength;
+    public int dexterity;
+    public int constitution;
+    public int wisdom;
+    public int intelligence;
+    public int charisma;
     static Player instance;
     void Awake()
     {
@@ -49,6 +49,7 @@ public class Player : MonoBehaviour {
         //if the character's stats result in death, do that stuff here
     }
 
+    
    public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
@@ -88,4 +89,6 @@ public class Player : MonoBehaviour {
 
 
     }
+
+
 }
