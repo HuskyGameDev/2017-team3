@@ -41,10 +41,10 @@ public class Options {
     }
     public bool isAvailable(Player p)
     {
-        bool s = p.stress < stress;
-        bool h = p.homework < homework;
-        bool e = p.exhaustion < exhaustion;
-        bool m = p.money > money;
+        bool s = p.stress < stress && stress!=0;
+        bool h = p.homework < homework && homework!=0;
+        bool e = p.exhaustion < exhaustion && exhaustion!=0;
+        bool m = p.money > money && money!=0;
         return s  && h && e && m;
     }
     public void updatePlayer(Player p)
@@ -53,5 +53,14 @@ public class Options {
         p.HomeworkMod(addhomework);
         p.MoneyMod(addmoney);
         p.StressMod(addstress);
+    }
+    public bool[] missing (Player p)
+    {
+        bool[] results = new bool[4];
+        results[0] = !(p.stress < stress && stress != 0);
+        results[1] = !(p.homework < homework && homework != 0);
+        results[2] = !(p.exhaustion < exhaustion && exhaustion != 0);
+        results[3] = !(p.money > money && money != 0);
+        return results;
     }
 }

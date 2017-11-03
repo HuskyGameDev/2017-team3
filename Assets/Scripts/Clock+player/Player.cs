@@ -70,6 +70,7 @@ public class Player : MonoBehaviour {
         //if the character's stats result in death, do that stuff here
     }
 
+    
    public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
@@ -109,4 +110,6 @@ public class Player : MonoBehaviour {
 
 
     }
+
+
 }
