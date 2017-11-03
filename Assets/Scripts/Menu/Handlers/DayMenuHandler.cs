@@ -30,14 +30,22 @@ public class DayMenuHandler : MonoBehaviour {
         
     }
     void Start () {
-		
+        player.homework += 1; //todo decide what homework value this should be
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
-        TempBars.text = "Money: " + player.money + "\n Exhaustion: " + player.exhaustion + "\n Stress: " + player.stress + "\n Homework" + player.homework;
+        TempBars.text = player.PlayerName +"\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
+        if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
+        {
+            SceneManager.LoadScene(4);
+        }
+        if (player.stress > 100)
+        {
+            player.stress = 100;
+        }
 	}
     public void Back()
     {
@@ -66,7 +74,7 @@ public class DayMenuHandler : MonoBehaviour {
         {
             case 1:
                 chosenTask.text = "Workout";  // Calls task to preform the task
-                if(player.exhaustion >= 55)
+                if (player.exhaustion >= 55)
                 {
                     chosenTask.text = "Too tired to workout";
                 }
@@ -74,7 +82,7 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-5);
                 break;
             case 2:
-                chosenTask.text = "Do job";
+                chosenTask.text = "Do Job";
                 player.MoneyMod(30);
                 player.ExhaustionMod(15);
                 break;
@@ -85,13 +93,13 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(5);
                 break;
             case 4:
-                chosenTask.text = "Go out with friends";
                 if(player.homework > 50)
                 {
                     chosenTask.text = "Cannot go out with friends";
                 }
                 player.StressMod(-25);
                 player.ExhaustionMod(10);
+                chosenTask.text = "Go out with Friends";
                 break;
             case 5:
                 chosenTask.text = "Study";
@@ -100,8 +108,8 @@ public class DayMenuHandler : MonoBehaviour {
                 player.ExhaustionMod(10);
                 break;
             case 6:
-                chosenTask.text = "Play video games";
-                if(player.homework > 45)
+                chosenTask.text = "Play Video Games";
+                if (player.homework > 45)
                 {
                     chosenTask.text = "Cannot play video games";
                 }
@@ -109,8 +117,8 @@ public class DayMenuHandler : MonoBehaviour {
                 player.ExhaustionMod(10);
                 break;
             case 7:
-                chosenTask.text = "Go shopping";
-                if(player.money < 25)
+                chosenTask.text = "Go Shopping";
+                if (player.money < 25)
                 {
                     chosenTask.text = "Cannot go shopping";
                 }
@@ -118,8 +126,8 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-25);
                 break;
             case 8:
-                chosenTask.text = "Take a nap";
-                if(clock.day >= 12)
+                chosenTask.text = "Take a Nap";
+                if (clock.day >= 12)
                 {
                     EndDay();
                 }
@@ -135,6 +143,18 @@ public class DayMenuHandler : MonoBehaviour {
         if (startDay < clock.day)
         {
             mult = clock.time;
+        }
+        if(player.stress>50 && player.stress < 75)
+        {
+            mult *= 2;
+        }
+        if (player.stress > 75 && player.stress<100)
+        {
+            mult *= 3;
+        }
+        if (player.stress >= 100)
+        {
+            mult *= 4;
         }
         player.ExhaustionMod(10*mult);
     }
