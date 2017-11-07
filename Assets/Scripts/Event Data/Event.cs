@@ -80,4 +80,9 @@ public class Event {
     {
         return nextEvents;
     }
+
+    public void setNextEvents(List<Event> list)
+    {
+        this.nextEvents = list;
+    }
 }
