@@ -1,0 +1,6 @@
+e-{Buried in homework}{You have too many assignments and can't handle the stress.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 #os:0
+o-{name}{description} s:<int>h:<int>e:<int>m:<float> dstr:<int>ddex:<int>dcon:<int>dwis:<int>dint:<int>dcha:<int>ds:<int>dh:<int>de:<int>dm:<float> ;
+
+e-{name}{description} s:<int>h:<int>e:<int>m:<float> str:<uint>dex:<uint>con:<uint>int:<uint>wis:<uint>cha:<uint>w:<int> #os:<int> #ne:<int> 
+n- #filename:	#filename:
+o-{name}{description} s:<int>h:<int>e:<int>m:<float> dstr:<int>ddex:<int>dcon:<int>dwis:<int>dint:<int>dcha:<int>ds:<int>dh:<int>de:<int>dm:<float> ;
