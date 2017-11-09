@@ -159,27 +159,27 @@ public class Event_Parser{
 
         //str change
         line = line.Remove(0, line.IndexOf('s') + 4);
-        uint dstr = Convert.ToUInt32(line.Substring(0, line.IndexOf('d') - 1));
+        int dstr = Convert.ToInt32(line.Substring(0, line.IndexOf('d') - 1));
 
         //dex change
         line = line.Remove(0, line.IndexOf('d') + 4);
-        uint ddex = Convert.ToUInt32(line.Substring(0, line.IndexOf('c') - 1));
+        int ddex = Convert.ToInt32(line.Substring(0, line.IndexOf('c') - 1));
 
         //con change
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint dcon = Convert.ToUInt32(line.Substring(0, line.IndexOf('i') - 1));
+        int dcon = Convert.ToInt32(line.Substring(0, line.IndexOf('i') - 1));
 
         //int change
         line = line.Remove(0, line.IndexOf('i') + 4);
-        uint dinte = Convert.ToUInt32(line.Substring(0, line.IndexOf('w') - 1));
+        int dinte = Convert.ToInt32(line.Substring(0, line.IndexOf('w') - 1));
 
         //wis change
         line = line.Remove(0, line.IndexOf('w') + 4);
-        uint dwis = Convert.ToUInt32(line.Substring(0, line.IndexOf('c') - 1));
+        int dwis = Convert.ToInt32(line.Substring(0, line.IndexOf('c') - 1));
 
         //cha change
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint dcha = Convert.ToUInt32(line.Substring(0, line.IndexOf('s') - 1));
+        int dcha = Convert.ToInt32(line.Substring(0, line.IndexOf('s') - 1));
 
         //stress change
         line = line.Remove(0, line.IndexOf('s') + 2);
@@ -195,8 +195,8 @@ public class Event_Parser{
 
         //money change
         line = line.Remove(0, line.IndexOf('m') + 2);
-        int dm = Convert.ToInt32(line.Substring(0, line.IndexOf(';')));
-        return null;
+        float dm = Convert.ToSingle(line.Substring(0, line.IndexOf(';')));
+        return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha, ds, dh, de, dm, name, description);
     }
 
     private string ReadString(string line)
