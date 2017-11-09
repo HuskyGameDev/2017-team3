@@ -1,3 +1,5 @@
+this needs documentation
+
 e-{name}{description} s:<int>h:<int>e:<int>m:<float> str:<uint>dex:<uint>con:<uint>int:<uint>wis:<uint>cha:<uint>w:<int> #os:<int> #ne:<int> 
 n- #filename:	#filename:
 o-{name}{description} s:<int>h:<int>e:<int>m:<float> dstr:<int>ddex:<int>dcon:<int>dwis:<int>dint:<int>dcha:<int>ds:<int>dh:<int>de:<int>dm:<float> ;
