@@ -68,7 +68,8 @@ public class Event_Parser{
     {
         //remove "e-{" and read name field
         line = line.Remove(0, 3);
-        string name = ReadString(line);
+        string name = ReadString(line.Substring(0, line.IndexOf('}')));
+
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
         string description = ReadString(line);
@@ -131,7 +132,71 @@ public class Event_Parser{
 
     private Options BuildOption(string line)
     {
-        return null; //TODO
+        //remove "o-{" and read name field
+        line = line.Remove(0, 3);
+        string name = ReadString(line.Substring(0, line.IndexOf('}')));
+
+        //remove "*}{" and read description field
+        line = line.Remove(0, line.IndexOf('{') + 1);
+        string description = ReadString(line);
+        //cut off the description, begin reading ints and such, oh boy
+
+        //stress threshold
+        line = line.Remove(0, line.IndexOf('}') + 4);
+        int s = Convert.ToInt32(line.Substring(0, line.IndexOf('h')));
+
+        //homework threshold
+        line = line.Remove(0, line.IndexOf('h') + 2);
+        int h = Convert.ToInt32(line.Substring(0, line.IndexOf('e')));
+
+        //exhaustiion threshold
+        line = line.Remove(0, line.IndexOf('e') + 2);
+        int e = Convert.ToInt32(line.Substring(0, line.IndexOf('m')));
+
+        //money threshold
+        line = line.Remove(0, line.IndexOf('m') + 2);
+        float m = Convert.ToSingle(line.Substring(0, line.IndexOf('s')));
+
+        //str change
+        line = line.Remove(0, line.IndexOf('s') + 4);
+        uint dstr = Convert.ToUInt32(line.Substring(0, line.IndexOf('d') - 1));
+
+        //dex change
+        line = line.Remove(0, line.IndexOf('d') + 4);
+        uint ddex = Convert.ToUInt32(line.Substring(0, line.IndexOf('c') - 1));
+
+        //con change
+        line = line.Remove(0, line.IndexOf('c') + 4);
+        uint dcon = Convert.ToUInt32(line.Substring(0, line.IndexOf('i') - 1));
+
+        //int change
+        line = line.Remove(0, line.IndexOf('i') + 4);
+        uint dinte = Convert.ToUInt32(line.Substring(0, line.IndexOf('w') - 1));
+
+        //wis change
+        line = line.Remove(0, line.IndexOf('w') + 4);
+        uint dwis = Convert.ToUInt32(line.Substring(0, line.IndexOf('c') - 1));
+
+        //cha change
+        line = line.Remove(0, line.IndexOf('c') + 4);
+        uint dcha = Convert.ToUInt32(line.Substring(0, line.IndexOf('s') - 1));
+
+        //stress change
+        line = line.Remove(0, line.IndexOf('s') + 2);
+        int ds = Convert.ToInt32(line.Substring(0, line.IndexOf('h') - 1));
+
+        //homework change
+        line = line.Remove(0, line.IndexOf('h') + 2);
+        int dh = Convert.ToInt32(line.Substring(0, line.IndexOf('e') - 1));
+
+        //exhaustion change
+        line = line.Remove(0, line.IndexOf('e') + 2);
+        int de = Convert.ToInt32(line.Substring(0, line.IndexOf('m') - 1));
+
+        //money change
+        line = line.Remove(0, line.IndexOf('m') + 2);
+        int dm = Convert.ToInt32(line.Substring(0, line.IndexOf(';')));
+        return null;
     }
 
     private string ReadString(string line)
