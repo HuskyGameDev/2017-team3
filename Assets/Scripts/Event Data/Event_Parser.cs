@@ -9,7 +9,7 @@ public class Event_Parser{
     private const string endlessPath = @"Endless.event";
     private const string initialPath = @"Initial.event";
     private const string nextEventsPath = @"Next-Events\";
-    private string dataFolder = Application.dataPath + @"Data\"; //verify this is the correct path
+    private string dataFolder = Application.dataPath + @"\Data\"; //verify this is the correct path
 
     private List<Event> events;
 
