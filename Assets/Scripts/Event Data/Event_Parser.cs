@@ -32,7 +32,7 @@ public class Event_Parser{
         Event e;
         while((line = file.ReadLine()) != null)
         {
-            if (line.StartsWith("e-"))
+            if (line.StartsWith("\te-"))
             {
                 List<Event> following = new List<Event>();
                 if(line.Contains("#ne:"))
