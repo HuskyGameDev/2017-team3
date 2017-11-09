@@ -70,6 +70,7 @@ public class Player : MonoBehaviour {
         //if the character's stats result in death, do that stuff here
     }
 
+    
    public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
@@ -108,5 +109,30 @@ public class Player : MonoBehaviour {
         //write something to tell the HUD that our money level needs to be updated
 
 
+    }
+
+    public void ChangeStr(int str)
+    {
+        strength = Mathf.Clamp(strength + str, 0, 100);
+    }
+    public void ChangeDex(int dex)
+    {
+        dexterity = Mathf.Clamp(dexterity + dex, 0, 100);
+    }
+    public void ChangeCon(int con)
+    {
+        constitution = Mathf.Clamp(constitution + con, 0, 100);
+    }
+    public void ChangeWis(int wis)
+    {
+        wisdom = Mathf.Clamp(wisdom + wis, 0, 100);
+    }
+    public void ChangeInt(int intel)
+    {
+        intelligence = Mathf.Clamp(intelligence + intel, 0, 100);
+    }
+    public void ChangeCha(int cha)
+    {
+        charisma = Mathf.Clamp(charisma + cha, 0, 100);
     }
 }

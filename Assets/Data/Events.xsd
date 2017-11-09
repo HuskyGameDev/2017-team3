@@ -1,0 +1,42 @@
+<?xml version = "1.0"?>
+
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  targetNamespace="https://www.w3.org/2001/XMLSchema"
+  xsi:schemaLocation="https://www.w3.org/2001/XMLSchema
+                      https://www.w3.org/2009/XMLSchema/XMLSchema.xsd">
+	
+	<xs:element name="Event"
+				minOccurs="0"
+				maxOccurs="unbounded">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="Description" type="xs:string"/>
+				<xs:element name="thresholds" type ="Thresholds"/>
+				<xs:element name="Options"/>
+					<xs:complexType>
+						<xs:all>
+						</xs:all>
+					</xs:complexType>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name = "Thresholds">
+	<!--Stat thresholds go here-->
+		<xs:all>
+			<xs:element name="stress" type="xs:integer" default="0"/>
+			<xs:element name="homework" type="xs:integer" default="0"/>
+			<xs:element name="exhaustion" type="xs:integer" default="0"/>
+			<xs:element name="money" type="xs:decimal" default="0"/>
+			<xs:element name="strength" type="xs:integer" default="0"/>
+			<xs:element name="dexterity" type="xs:integer" default="0"/>
+			<xs:element name="constitution" type="xs:integer" default="0"/>
+			<xs:element name="intelligence" type="xs:integer" default="0"/>
+			<xs:element name="wisdom" type="xs:integer" default="0"/>
+			<xs:element name="charisma" type="xs:integer" default="0"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
