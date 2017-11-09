@@ -18,7 +18,7 @@ public class DayMenuHandler : MonoBehaviour {
         clock = GameObject.FindGameObjectWithTag ( "Clock" ).GetComponent<Clock>();
         player =GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         startDay = clock.day;
-        if (player.wentToClass)
+        if (player.wentToClass)     //increases player exhaustion when going to class
         {
             player.exhaustion = 20;
         }
@@ -77,31 +77,31 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-5);
                 break;
             case 2:
-                chosenTask.text = "Do Job";
+                chosenTask.text = "Do Job";     
                 player.MoneyMod(30);
                 break;
             case 3:
                 chosenTask.text = "Do Homework";
-                player.HomeworkMod(-25);
-                player.StressMod(5);
+                player.HomeworkMod(-25);        //Affects player stats
+                player.StressMod(15);
                 break;
             case 4:
                 chosenTask.text = "Go out with Friends";
-                player.StressMod(-25);
-                player.MoneyMod(-5);
+                player.StressMod(-15);
+                player.MoneyMod(-15);
                 break;
             case 5:
                 chosenTask.text = "Study";
                 player.HomeworkMod(-15);
-                player.StressMod(10);
+                player.StressMod(20);
                 break;
             case 6:
                 chosenTask.text = "Play Video Games";
-                player.StressMod(-25);
+                player.StressMod(-5);
                 break;
             case 7:
                 chosenTask.text = "Go Shopping";
-                if (player.money < 25)
+                if (player.money < 25)             //if the players money is less than the assigned variable you cannot perform the shopping action
                 {
                     chosenTask.text = "Cannot go shopping";
                     return;
@@ -111,7 +111,7 @@ public class DayMenuHandler : MonoBehaviour {
                 break;
             case 8:
                 chosenTask.text = "Take a Nap";
-                if (startDay < clock.day)
+                if (startDay < clock.day)           //if the start clock is more than the actual time, end the day
                 {
                     EndDay();
                 }
