@@ -78,7 +78,7 @@ public class Player : MonoBehaviour {
    public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
-        stress = stress + amount;
+        stress = Mathf.Clamp(stress + amount,0,100);
 
         //write something to tell the HUD that our stress level needs to be updated
 
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour {
     public void HomeworkMod(int amount)
     {
         //positive amount to increase homework, negative to decrease
-        homework = homework + amount;
+        homework = Mathf.Clamp(homework + amount,0,200);
 
         //write something to tell the HUD that our homework level needs to be updated
 
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour {
     public void ExhaustionMod(int amount)
     {
         //positive amount to increase exhaustion, negative to decrease
-        exhaustion = exhaustion + amount;
+        exhaustion = Mathf.Clamp(exhaustion + amount,0,100);
 
         //write something to tell the HUD that our exhaustion level needs to be updated
 
