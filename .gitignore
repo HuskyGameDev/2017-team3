@@ -36,3 +36,4 @@ sysinfo.txt
 *.stamp
 *.log
 Library/assetDatabase3
+*.meta~HEAD
