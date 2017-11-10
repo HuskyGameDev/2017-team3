@@ -313,9 +313,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 180283843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &224579007
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,9 +525,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 233044839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &284105720
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +702,6 @@ RectTransform:
   - {fileID: 224579008}
   - {fileID: 835956153}
   - {fileID: 1633865056}
-  - {fileID: 1759078000}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1438,9 +1441,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 402507328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &438679894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,9 +1973,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 835956152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1026101620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,9 +2109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1026101620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1076095409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,9 +2245,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076095409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1081471459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,9 +2381,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081471459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1086573491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,9 +2517,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086573491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1339954741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,9 +2653,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339954741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1362742144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,9 +2789,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362742144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1384712260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +2980,7 @@ RectTransform:
   - {fileID: 1362742145}
   - {fileID: 1858718123}
   - {fileID: 1026101621}
+  - {fileID: 1759078000}
   m_Father: {fileID: 344011399}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3386,12 +3406,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 344011399}
-  m_RootOrder: 4
+  m_Father: {fileID: 1435430635}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1280, y: 228}
+  m_AnchoredPosition: {x: 34, y: 471}
   m_SizeDelta: {x: 445.4, y: 456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759078001
@@ -3691,9 +3711,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1858718122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: c069bbed7c43dc841be8e6f84827ebda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioSource: {fileID: 1576135495}
+  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
 --- !u!1 &1942091899
 GameObject:
   m_ObjectHideFlags: 0
