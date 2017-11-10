@@ -4,6 +4,9 @@ using System.IO;
 using System;
 using UnityEngine;
 
+/**
+ * A script that reads in events from game files and parses them into game objects. 
+ */
 public class Event_Parser{
 
     private const string endlessPath = @"Endless.event";
@@ -24,6 +27,9 @@ public class Event_Parser{
         }
     }
 
+    /**
+     * 
+     */
     private List<Event> ParseFile(string path)
     {
         List<Event> events = new List<Event>();
@@ -48,6 +54,9 @@ public class Event_Parser{
         return events;
     }
 
+    /**
+     * 
+     */
     private List<Event> BuildNextEvents(string line)
     {
         string path;
@@ -64,6 +73,9 @@ public class Event_Parser{
         return nextEvents;
     }
 
+    /**
+     * 
+     */
     private Event BuildEvent(string line, StreamReader file)
     {
         //remove "e-{" and read name field
@@ -130,6 +142,9 @@ public class Event_Parser{
         return new Event(s, h, e, m, str, dex, con, wis, inte, cha, new List<Options>(), description, w, new List<Event>(), name, false, false);
     }
 
+    /**
+     * 
+     */
     private Options BuildOption(string line)
     {
         //remove "o-{" and read name field
@@ -199,6 +214,9 @@ public class Event_Parser{
         return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha, ds, dh, de, dm, name, description);
     }
 
+    /**
+     * 
+     */
     private string ReadString(string line)
     {
         return line.Substring(0, line.IndexOf('}'));
