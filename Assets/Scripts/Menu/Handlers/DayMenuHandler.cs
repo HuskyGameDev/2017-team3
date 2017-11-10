@@ -50,8 +50,8 @@ public class DayMenuHandler : MonoBehaviour {
     public void Back()
     {
         //since these don't destroy on their own, we need to destroy them when they aren't being used
-        Destroy(player);
-        Destroy(clock);
+        Destroy(player.gameObject);
+        Destroy(clock.gameObject);
         SceneManager.LoadScene(0);
 
     }
@@ -87,6 +87,11 @@ public class DayMenuHandler : MonoBehaviour {
                 break;
             case 4:
                 chosenTask.text = "Go out with Friends";
+                if (player.money < 5)
+                {
+                    chosenTask.text = "You are too broke to go out with Friends";
+                    return;
+                }
                 player.StressMod(-25);
                 player.MoneyMod(-5);
                 break;
@@ -103,7 +108,7 @@ public class DayMenuHandler : MonoBehaviour {
                 chosenTask.text = "Go Shopping";
                 if (player.money < 25)
                 {
-                    chosenTask.text = "Cannot go shopping";
+                    chosenTask.text = "You are too broke to go shopping";
                     return;
                 }
                 player.MoneyMod(-25);

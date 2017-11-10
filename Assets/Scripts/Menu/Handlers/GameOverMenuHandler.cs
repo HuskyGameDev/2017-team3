@@ -19,8 +19,8 @@ public class GameOverMenuHandler : MonoBehaviour {
 	}
     public void back()
     {
-        Destroy(player);
-        Destroy(clock);
+        Destroy(player.gameObject);
+        Destroy(clock.gameObject);
         SceneManager.LoadScene(0);
     }
 }

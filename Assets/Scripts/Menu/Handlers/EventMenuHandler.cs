@@ -168,8 +168,8 @@ public class EventMenuHandler : MonoBehaviour {
     public void back()
     {
         //since these don't destroy on their own, we need to destroy them when they aren't being used
-        Destroy(player);
-        Destroy(clock);
+        Destroy(player.gameObject);
+        Destroy(clock.gameObject);
         SceneManager.LoadScene(0);
     }
     public void NextDay()
