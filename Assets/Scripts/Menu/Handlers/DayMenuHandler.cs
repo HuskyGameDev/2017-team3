@@ -46,7 +46,10 @@ public class DayMenuHandler : MonoBehaviour {
         {
             player.stress = 100;
         }
-	}
+    }
+    /** Back()
+     * Destroys objects and returns to main menu
+     **/
     public void Back()
     {
         //since these don't destroy on their own, we need to destroy them when they aren't being used
@@ -55,6 +58,9 @@ public class DayMenuHandler : MonoBehaviour {
         SceneManager.LoadScene(0);
 
     }
+    /** EndDay()
+     * Ends the day and go to the next day 
+     **/
     public void EndDay()
     {
         player.wentToClass = goToClass.isOn;

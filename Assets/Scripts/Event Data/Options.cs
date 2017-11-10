@@ -39,6 +39,10 @@ public class Options {
         addexhaustion = adde;
         addmoney = addm;
     }
+    /**isAvailable(Player p)
+     * p: reference to a player
+     * States which option is avaiable
+     **/
     public bool isAvailable(Player p)
     {
         bool s = p.stress < stress && stress!=0;
@@ -47,6 +51,9 @@ public class Options {
         bool m = p.money > money && money!=0;
         return s  && h && e && m;
     }
+    /**updatePlayer(Player p)
+     * 
+     **/
     public void updatePlayer(Player p)
     {
         p.ExhaustionMod(addexhaustion);
