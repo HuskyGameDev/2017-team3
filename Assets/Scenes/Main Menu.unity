@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 224802191}
-  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
+  ClickSound: {fileID: 8300000, guid: c426048fdcce149458aa0d489e0e218a, type: 3}
 --- !u!1 &224802190
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 224802191}
-  ClickSound: {fileID: 8300000, guid: 3b31c8759c7a9b24693508d495dae8ee, type: 3}
+  ClickSound: {fileID: 8300000, guid: c426048fdcce149458aa0d489e0e218a, type: 3}
 --- !u!1 &1887099147
 GameObject:
   m_ObjectHideFlags: 0
