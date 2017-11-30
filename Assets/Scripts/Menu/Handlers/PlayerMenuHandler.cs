@@ -10,11 +10,14 @@ public class PlayerMenuHandler : MonoBehaviour {
     public Text namefield;
     Clock clock;
     Player player;
+    int chosenClass;
     // Use this for initialization
     void Start () {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+        player.family = 50;
+        player.friends = 50;
     }
 	
 	// Update is called once per frame
@@ -26,9 +29,10 @@ public class PlayerMenuHandler : MonoBehaviour {
      * ChangeText(string input)
      * input: Info passed in by the button presses. This string will be told to the user and will eventually let the player class know what role the player chose
      **/
-    public void ChangeText(string input)
+    public void ChoseClass(int input)
     {
-        Selection.text = "Chosen Class: " +input;
+        Selection.text = "Chosen Class: " +input.ToString();
+        chosenClass = input;
     }
     /**
     * Back ()
