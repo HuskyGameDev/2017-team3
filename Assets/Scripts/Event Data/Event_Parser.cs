@@ -8,7 +8,7 @@ using UnityEngine;
  * A script that reads in events from game files and parses them into game objects. 
  */
 public class Event_Parser{
-
+        
     private const string endlessPath = @"Endless.event";
     private const string initialPath = @"Initial.event";
     private const string nextEventsPath = @"Next-Events\";
@@ -28,7 +28,7 @@ public class Event_Parser{
     }
 
     /**
-     * 
+     * x`
      */
     private List<Event> ParseFile(string path)
     {
@@ -38,7 +38,7 @@ public class Event_Parser{
         Event e;
         while((line = file.ReadLine()) != null)
         {
-            if (line.StartsWith("\te-"))
+            if (line.StartsWith("e-"))
             {
                 List<Event> following = new List<Event>();
                 if(line.Contains("#ne:"))
@@ -80,7 +80,7 @@ public class Event_Parser{
     {
         //remove "e-{" and read name field
         line = line.Remove(0, 3);
-        string name = ReadString(line.Substring(0, line.IndexOf('}')));
+        string name = ReadString(line);
 
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
@@ -136,9 +136,11 @@ public class Event_Parser{
         int optionCount = Convert.ToInt32(line);
         List<Options> options = new List<Options>(optionCount);
 
-        for(int i = 0; i < optionCount; i++, line = file.ReadLine())
+        for (int i = 0; i < optionCount; i++)
+        {
+            line = file.ReadLine();
             options.Add(BuildOption(line)); //read each option line by line
-
+        }
         return new Event(s, h, e, m, str, dex, con, wis, inte, cha, new List<Options>(), description, w, new List<Event>(), name, false, false);
     }
 
@@ -149,7 +151,7 @@ public class Event_Parser{
     {
         //remove "o-{" and read name field
         line = line.Remove(0, 3);
-        string name = ReadString(line.Substring(0, line.IndexOf('}')));
+        string name = ReadString(line);
 
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
@@ -170,14 +172,14 @@ public class Event_Parser{
 
         //money threshold
         line = line.Remove(0, line.IndexOf('m') + 2);
-        float m = Convert.ToSingle(line.Substring(0, line.IndexOf('s')));
+        float m = Convert.ToSingle(line.Substring(0, line.IndexOf('s') - 1));
 
         //str change
         line = line.Remove(0, line.IndexOf('s') + 4);
         int dstr = Convert.ToInt32(line.Substring(0, line.IndexOf('d') - 1));
 
         //dex change
-        line = line.Remove(0, line.IndexOf('d') + 4);
+        line = line.Remove(0, line.IndexOf('d') + 5);
         int ddex = Convert.ToInt32(line.Substring(0, line.IndexOf('c') - 1));
 
         //con change
@@ -219,6 +221,7 @@ public class Event_Parser{
      */
     private string ReadString(string line)
     {
-        return line.Substring(0, line.IndexOf('}'));
+        int index = line.IndexOf('}');
+        return line.Substring(0, index);
     }
 }
