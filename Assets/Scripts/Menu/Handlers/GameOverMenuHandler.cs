@@ -24,6 +24,7 @@ public class GameOverMenuHandler : MonoBehaviour {
      **/
     public void back()
     {
+        //TODO save data here if something was unlocked or new high score
         Destroy(player.gameObject);
         Destroy(clock.gameObject);
         SceneManager.LoadScene(0);

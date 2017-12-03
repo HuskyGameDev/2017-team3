@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public Unlocked data;
     
     //stats
     public int stress;
@@ -21,9 +22,23 @@ public class Player : MonoBehaviour {
     public int charisma;
     static Player instance;
 
+    //individaul flags for effects due to class roles
+    public bool startDayLate;
+    public bool TA;
+    public bool Hidden;
+    public bool Rich;
+    public bool Otaku;
+    public bool ROTC;//we may not need to use this
+    public bool GOD;
     public List<Event> CurrentEvents;
+    private bool eventUnlock1;
+    private bool eventUnlock2;
+    private bool eventUnlock3;
     void Awake()
     {
+        eventUnlock1 = false;
+        eventUnlock2 = false;
+        eventUnlock3 = false;
         CurrentEvents = new List<Event>();
         DontDestroyOnLoad(this);
 
@@ -61,8 +76,9 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        data = new Unlocked();//TODO try to find saved data here
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -138,5 +154,25 @@ public class Player : MonoBehaviour {
     public void ChangeCha(int cha)
     {
         charisma = Mathf.Clamp(charisma + cha, 0, 100);
+    }
+    public void ChangeFam(int fam)
+    {
+        charisma = Mathf.Clamp(family + fam, 0, 100);
+    }
+    public void ChangeFri(int fri)
+    {
+        charisma = Mathf.Clamp(friends + fri, 0, 100);
+    }
+    public void unlockStudentCouncil()
+    {
+        eventUnlock1 = true;
+    }
+    public void unlockTA()
+    {
+        eventUnlock2 = true;
+    }
+    public void unlockGreek()
+    {
+        eventUnlock3 = true;
     }
 }
