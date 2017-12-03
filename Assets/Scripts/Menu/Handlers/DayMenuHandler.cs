@@ -123,7 +123,7 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-25);
 				if(player.homework > 45)
 				{
-					chosenTask.text = "Cannot play video games"
+                    chosenTask.text = "Cannot play video games";
 				}
                 player.StressMod(-5);
 				player.ExhaustionMod(15);
