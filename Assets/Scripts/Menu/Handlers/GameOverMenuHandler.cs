@@ -12,6 +12,7 @@ public class GameOverMenuHandler : MonoBehaviour {
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         //TODO display if the player was successful or not as well as end stats
+        UnlockRewards 
     }
 	
 	// Update is called once per frame
