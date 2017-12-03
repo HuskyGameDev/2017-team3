@@ -1,4 +1,3 @@
-e-{Buried in homework}{You have too many assignments and can't handle the stress.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 #os:1
-o-{name}{description} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dint:0 dwis:0 dcha:0 ds:0 dh:0 de:0 dm:0 ;
-e-{You're broke}{You can barely afford to buy food right now and don't know how you're gonna manage rent. It's really stressing you out.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 #os:0
-	
+e-{Buried in homework}{You have too many assignments and can't handle the stress.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{name}{description} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:0 dh:0 de:0 dm:0 ;
+//e-{You're broke}{You can barely afford to buy food right now and don't know how you're gonna manage rent. It's really stressing you out.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:0

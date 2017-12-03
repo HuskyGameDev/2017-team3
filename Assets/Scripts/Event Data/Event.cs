@@ -20,10 +20,11 @@ public class Event {
     string eventName;
     int weight;
     List<Event> nextEvents;
+    bool repeatable;
     bool start;
     bool endless;
 
-    public Event(int s, int h, int e, float m, int str, int dex, int con, int wis, int it, int cha,int fam, int fri, List<Options> c, string desc, int w, List<Event> n, string name, bool start, bool endless)
+    public Event(int s, int h, int e, float m, int str, int dex, int con, int wis, int it, int cha,int fam, int fri, List<Options> c, string desc, int w, List<Event> n, string name, bool repeatable, bool start, bool endless)
     {
         stress = s;
         homework = h;
