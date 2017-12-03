@@ -36,7 +36,12 @@ public class DayMenuHandler : MonoBehaviour {
         
     }
     void Start () {
-        player.homework += 1; //todo decide what homework value this should be
+        player.homework += 5; //todo decide what homework value this should be
+        if(player.homework > 30)
+        {
+            player.StressMod(player.homework / 10);
+            //more homework means more stress
+        }
         if (player.Rich)
         {
             if (player.family < 10)//todo decide this value
