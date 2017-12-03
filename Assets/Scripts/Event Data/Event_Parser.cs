@@ -28,7 +28,7 @@ public class Event_Parser{
     }
 
     /**
-     * x`
+     * x
      */
     private List<Event> ParseFile(string path)
     {
@@ -84,7 +84,7 @@ public class Event_Parser{
 
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
-        string description = line.Substring(0, line.IndexOf('{'));
+        string description = line.Substring(0, line.IndexOf('}'));
         //cut off the description, begin reading ints and such, oh boy
 
         //stress threshold
@@ -137,19 +137,27 @@ public class Event_Parser{
 
         //friend threshold
         line = line.Remove(0, line.IndexOf('f') + 4);
-        int friends = Convert.ToInt32(line.Substring(0, line.IndexOf('f')));
+        int friends = Convert.ToInt32(line.Substring(0, line.IndexOf('#')));
 
         //check for presence of options
         line = line.Remove(0, line.IndexOf('#') + 4);
-        int optionCount = Convert.ToInt32(line);
+        int optionCount = Convert.ToInt32(line.Substring(0, line.IndexOf('#')));
+        
+        //check if event is repeatable
+        line = line.Remove(0, line.IndexOf('#') + 8);
+        bool repeatable = Convert.ToBoolean(line);
+
         List<Options> options = new List<Options>(optionCount);
 
         for (int i = 0; i < optionCount; i++)
         {
             line = file.ReadLine();
-            options.Add(BuildOption(line)); //read each option line by line
+            if (line.StartsWith("o-"))
+            {
+                options.Add(BuildOption(line)); //read each option line by line
+            }
         }
-        return new Event(s, h, e, m, str, dex, con, wis, inte, cha, fam, friends, options, description, w, new List<Event>(), name, false, false);
+        return new Event(s, h, e, m, str, dex, con, wis, inte, cha, fam, friends, options, description, w, new List<Event>(), name, repeatable, false, false);
     }
 
     /**
@@ -211,7 +219,7 @@ public class Event_Parser{
         int dfam = Convert.ToInt32(line.Substring(0, line.IndexOf('f') - 1));
 
         //friend change
-        line = line.Remove(0, line.IndexOf('c') + 4);
+        line = line.Remove(0, line.IndexOf('f') + 4);
         int dfri = Convert.ToInt32(line.Substring(0, line.IndexOf('s') - 1));
 
         //stress change

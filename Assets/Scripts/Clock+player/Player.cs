@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    //public Unlocked data;
+    public Unlocked data;
     
     //stats
     public int stress;
