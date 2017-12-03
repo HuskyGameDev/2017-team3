@@ -8,6 +8,7 @@ public class GameOverMenuHandler : MonoBehaviour {
     Player player;
 	// Use this for initialization
 	void Start () {
+        //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         //TODO display if the player was successful or not as well as end stats
@@ -17,10 +18,14 @@ public class GameOverMenuHandler : MonoBehaviour {
 	void Update () {
 		
 	}
+    /**
+     * Back ()
+     * Destroys objects and returns to main menu
+     **/
     public void back()
     {
-        Destroy(player);
-        Destroy(clock);
+        Destroy(player.gameObject);
+        Destroy(clock.gameObject);
         SceneManager.LoadScene(0);
     }
 }

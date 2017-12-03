@@ -7,12 +7,14 @@ public class Event {
     int homework;    //if player homework is larger than this value
     int exhaustion;  //if player exhaustion  is larger than this value
     float money; //if player money is larger than this value
-    uint strength;
-    uint dexterity;
-    uint constitution;
-    uint wisdom;
-    uint intelligence;
-    uint charisma;
+    int strength;
+    int dexterity;
+    int constitution;
+    int wisdom;
+    int intelligence;
+    int charisma;
+    int family;
+    int friends;
     List<Options> Choices;
     string eventDescription;
     string eventName;
@@ -21,7 +23,7 @@ public class Event {
     bool start;
     bool endless;
 
-    public Event(int s, int h, int e, float m, uint str, uint dex, uint con, uint wis, uint it, uint cha, List<Options> c, string desc, int w, List<Event> n, string name, bool start, bool endless)
+    public Event(int s, int h, int e, float m, int str, int dex, int con, int wis, int it, int cha,int fam, int fri, List<Options> c, string desc, int w, List<Event> n, string name, bool start, bool endless)
     {
         stress = s;
         homework = h;
@@ -40,6 +42,8 @@ public class Event {
         eventName = name;
         this.start = start;
         this.endless = endless;
+        family = fam;
+        friends = fri;
     }
 
     public string getDescription()
@@ -54,16 +58,16 @@ public class Event {
 
     public int getWeight(Player p)
     {
-        bool s = p.stress < stress;
-        bool h = p.homework < homework;
-        bool e = p.exhaustion < exhaustion;
-        bool m = p.money < money;
-        bool str = p.strength < strength;
-        bool dex = p.dexterity < dexterity;
-        bool con = p.constitution < constitution;
-        bool wis = p.wisdom < wisdom;
-        bool it = p.intelligence < intelligence;
-        bool cha = p.charisma < charisma;
+        bool s = (p.stress < stress)||(stress<=0);
+        bool h = (p.homework < homework)||(homework<=0);
+        bool e = (p.exhaustion < exhaustion)||(exhaustion<=0);
+        bool m = p.money > money;
+        bool str = p.strength > strength;
+        bool dex = p.dexterity > dexterity;
+        bool con = p.constitution > constitution;
+        bool wis = p.wisdom > wisdom;
+        bool it = p.intelligence > intelligence;
+        bool cha = p.charisma > charisma;
         if (s && h && e && m && str && dex && con && wis && it && cha)
         {
             return weight * 2;
@@ -79,5 +83,10 @@ public class Event {
     public List<Event> getNextEvents()
     {
         return nextEvents;
+    }
+
+    public void setNextEvents(List<Event> list)
+    {
+        this.nextEvents = list;
     }
 }

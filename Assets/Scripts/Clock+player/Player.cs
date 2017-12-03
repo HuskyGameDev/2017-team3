@@ -35,6 +35,9 @@ public class Player : MonoBehaviour {
         {
             DestroyObject(gameObject);
         }
+        Event_Parser parser = new Event_Parser(false);
+        CurrentEvents = parser.GetEvents();
+        /**
         List<Event> events1 = new List<Event>();
         List<Event> events2 = new List<Event>();
         List<Event> events3 = new List<Event>();
@@ -53,6 +56,7 @@ public class Player : MonoBehaviour {
         List<Options> tempList3 = new List<Options>();
         tempList3.Add(new Options(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, "Test options1, things change", "You found a test event. Blame Jace if this continues"));
         CurrentEvents.Add(new Event(10, 11, 12, 16.77f, 1, 1, 1, 1, 1, 1, tempList3, "This is the temp event. Blame Jace if this exists This also is a starting list", 10, events3, "Starting Event", false, false));
+        */
     }
 
     // Use this for initialization
@@ -74,7 +78,7 @@ public class Player : MonoBehaviour {
    public  void StressMod(int amount)
     {
         //positive amount to increase stress, negative to decrease
-        stress = stress + amount;
+        stress = Mathf.Clamp(stress + amount,0,100);
 
         //write something to tell the HUD that our stress level needs to be updated
 
@@ -84,7 +88,7 @@ public class Player : MonoBehaviour {
     public void HomeworkMod(int amount)
     {
         //positive amount to increase homework, negative to decrease
-        homework = homework + amount;
+        homework = Mathf.Clamp(homework + amount,0,200);
 
         //write something to tell the HUD that our homework level needs to be updated
 
@@ -94,7 +98,7 @@ public class Player : MonoBehaviour {
     public void ExhaustionMod(int amount)
     {
         //positive amount to increase exhaustion, negative to decrease
-        exhaustion = exhaustion + amount;
+        exhaustion = Mathf.Clamp(exhaustion + amount,0,100);
 
         //write something to tell the HUD that our exhaustion level needs to be updated
 

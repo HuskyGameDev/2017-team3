@@ -18,7 +18,7 @@ public class DayMenuHandler : MonoBehaviour {
         clock = GameObject.FindGameObjectWithTag ( "Clock" ).GetComponent<Clock>();
         player =GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         startDay = clock.day;
-        if (player.wentToClass)     //increases player exhaustion when going to class
+        if (player.wentToClass)
         {
             player.exhaustion = 20;
         }
@@ -46,15 +46,21 @@ public class DayMenuHandler : MonoBehaviour {
         {
             player.stress = 100;
         }
-	}
+    }
+    /** Back()
+     * Destroys objects and returns to main menu
+     **/
     public void Back()
     {
         //since these don't destroy on their own, we need to destroy them when they aren't being used
-        Destroy(player);
-        Destroy(clock);
+        Destroy(player.gameObject);
+        Destroy(clock.gameObject);
         SceneManager.LoadScene(0);
 
     }
+    /** EndDay()
+     * Ends the day and go to the next day 
+     **/
     public void EndDay()
     {
         player.wentToClass = goToClass.isOn;
@@ -82,13 +88,13 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-5);
                 break;
             case 2:
-                chosenTask.text = "Do Job";     
+                chosenTask.text = "Do Job";
                 player.MoneyMod(30);
                 break;
             case 3:
                 chosenTask.text = "Do Homework";
-                player.HomeworkMod(-25);        //Affects player stats
-                player.StressMod(15);
+                player.HomeworkMod(-25);
+                player.StressMod(5);
                 break;
             case 4:
                 if(player.homework > 50)
@@ -98,15 +104,23 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(-25);
                 player.ExhaustionMod(10);
                 chosenTask.text = "Go out with Friends";
+                if (player.money < 5)
+                {
+                    chosenTask.text = "You are too broke to go out with Friends";
+                    return;
+                }
+                player.StressMod(-25);
+                player.MoneyMod(-5);
                 player.MoneyMod(-15);
                 break;
             case 5:
                 chosenTask.text = "Study";
                 player.HomeworkMod(-15);
-                player.StressMod(20);
+                player.StressMod(10);
                 break;
             case 6:
                 chosenTask.text = "Play Video Games";
+                player.StressMod(-25);
 				if(player.homework > 45)
 				{
 					chosenTask.text = "Cannot play video games"
@@ -116,8 +130,10 @@ public class DayMenuHandler : MonoBehaviour {
                 break;
             case 7:
                 chosenTask.text = "Go Shopping";
-                if (player.money < 25)             //if the players money is less than the assigned variable you cannot perform the shopping action
+                if (player.money < 25)
                 {
+                    chosenTask.text = "You are too broke to go shopping";
+                    return;
                     chosenTask.text = "Cannot go shopping";
                 }
                 player.MoneyMod(-25);
@@ -125,7 +141,7 @@ public class DayMenuHandler : MonoBehaviour {
                 break;
             case 8:
                 chosenTask.text = "Take a Nap";
-                if (startDay < clock.day)           //if the start clock is more than the actual time, end the day
+                if (startDay < clock.day)
                 {
                     EndDay();
                 }
