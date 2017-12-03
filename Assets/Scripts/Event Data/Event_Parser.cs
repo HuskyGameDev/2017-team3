@@ -105,27 +105,27 @@ public class Event_Parser{
 
         //str threshold
         line = line.Remove(0, line.IndexOf('s') + 4);
-        uint str = Convert.ToUInt32(line.Substring(0, line.IndexOf('d')));
+        int str = Convert.ToInt32(line.Substring(0, line.IndexOf('d')));
 
         //dex threshold
         line = line.Remove(0, line.IndexOf('d') + 4);
-        uint dex = Convert.ToUInt32(line.Substring(0, line.IndexOf('c')));
+        int dex = Convert.ToInt32(line.Substring(0, line.IndexOf('c')));
 
         //con threshold
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint con = Convert.ToUInt32(line.Substring(0, line.IndexOf('i')));
+        int con = Convert.ToInt32(line.Substring(0, line.IndexOf('i')));
 
         //int threshold
         line = line.Remove(0, line.IndexOf('i') + 4);
-        uint inte = Convert.ToUInt32(line.Substring(0, line.IndexOf('w')));
+        int inte = Convert.ToInt32(line.Substring(0, line.IndexOf('w')));
 
         //wis threshold
         line = line.Remove(0, line.IndexOf('w') + 4);
-        uint wis = Convert.ToUInt32(line.Substring(0, line.IndexOf('c')));
+        int wis = Convert.ToInt32(line.Substring(0, line.IndexOf('c')));
 
         //cha threshold
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint cha = Convert.ToUInt32(line.Substring(0, line.IndexOf('w')));
+        int cha = Convert.ToInt32(line.Substring(0, line.IndexOf('w')));
 
         //weight modifier
         line = line.Remove(0, line.IndexOf('w') + 2);
@@ -141,7 +141,7 @@ public class Event_Parser{
             line = file.ReadLine();
             options.Add(BuildOption(line)); //read each option line by line
         }
-        return new Event(s, h, e, m, str, dex, con, wis, inte, cha, new List<Options>(), description, w, new List<Event>(), name, false, false);
+        return new Event(s, h, e, m, str, dex, con, wis, inte, cha,0,0, new List<Options>(), description, w, new List<Event>(), name, false, false);
     }
 
     /**
@@ -213,7 +213,7 @@ public class Event_Parser{
         //money change
         line = line.Remove(0, line.IndexOf('m') + 2);
         float dm = Convert.ToSingle(line.Substring(0, line.IndexOf(';')));
-        return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha, ds, dh, de, dm, name, description);
+        return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha,0,0, ds, dh, de, dm, name, description);
     }
 
     /**
