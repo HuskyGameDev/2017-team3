@@ -88,9 +88,14 @@ public class DayMenuHandler : MonoBehaviour {
         //TODO Stop people from napping after midnight
         //determine what button was clicked
         switch (i)
+		// Calls task to preform the task
         {
             case 1:
-                chosenTask.text = "Workout";  // Calls task to preform the task
+                chosenTask.text = "Workout"; 
+				if(player.exhaustion >= 55)
+				{
+					chosenTask.text = "Too tired to workout";
+				}
                 player.StressMod(-5);
                 break;
             case 2:
@@ -129,6 +134,12 @@ public class DayMenuHandler : MonoBehaviour {
                     break;
                 }
             case 4:
+                if(player.homework > 50)
+                {
+                    chosenTask.text = "Cannot go out with friends";
+                }
+                player.StressMod(-25);
+                player.ExhaustionMod(10);
                 chosenTask.text = "Go out with Friends";
                 if (player.money < 5)
                 {
@@ -137,6 +148,7 @@ public class DayMenuHandler : MonoBehaviour {
                 }
                 player.StressMod(-25);
                 player.MoneyMod(-5);
+                player.MoneyMod(-15);
                 break;
             case 5:
                 chosenTask.text = "Study";
@@ -153,6 +165,12 @@ public class DayMenuHandler : MonoBehaviour {
             case 6:
                 chosenTask.text = "Play Video Games";
                 player.StressMod(-25);
+				if(player.homework > 45)
+				{
+					chosenTask.text = "Cannot play video games"
+				}
+                player.StressMod(-5);
+				player.ExhaustionMod(15);
                 break;
             case 7:
                 chosenTask.text = "Go Shopping";
@@ -160,6 +178,7 @@ public class DayMenuHandler : MonoBehaviour {
                 {
                     chosenTask.text = "You are too broke to go shopping";
                     return;
+                    chosenTask.text = "Cannot go shopping";
                 }
                 player.MoneyMod(-25);
                 player.StressMod(-25);

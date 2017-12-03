@@ -29,7 +29,7 @@ public class EventMenuHandler : MonoBehaviour {
         choice2.gameObject.SetActive(false);
         choice3.gameObject.SetActive(false);
         choice4.gameObject.SetActive(false);
-        if (todaysEvent.Equals(null))
+        if (todaysEvent == null)
         {
             choice1.GetComponentInChildren<Text>().text = "Error, Default choice only";
             eventDescription.text = "Error, Default event";
@@ -141,7 +141,7 @@ public class EventMenuHandler : MonoBehaviour {
             showWindow = true;
         }
         popupmenu.toggleActive(showWindow);
-        if (todaysEvent.Equals(null))
+        if (todaysEvent == null)
         {
             choiceDescription.text = "ERROR! Default Value";
         }
