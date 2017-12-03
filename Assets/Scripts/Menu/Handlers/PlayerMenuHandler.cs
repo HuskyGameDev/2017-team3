@@ -11,6 +11,7 @@ public class PlayerMenuHandler : MonoBehaviour {
     Clock clock;
     Player player;
     int chosenClass;
+    public Text perks;
     // Use this for initialization
     void Start () {
         //get reference to the clock and player objects
@@ -33,7 +34,23 @@ public class PlayerMenuHandler : MonoBehaviour {
     {
         Selection.text = "Chosen Class: " +input.ToString();
         chosenClass = input;
+        switch (chosenClass)
+        {
+            case 1:
+                if (chosenClass == 1)
+                {
+                    perks.text = "Perks: None";
+                }
+                break;
+            case 2:
+                if(chosenClass == 2)
+                {
+                    perks.text = "Perks: Strength, Dexterity and Stress Up. Intelligence, Wisdom down and start with more exhaustion and start days later";
+                }
+                break;
+        }
     }
+
     /**
     * Back ()
     * Destroys objects and returns to main menu
