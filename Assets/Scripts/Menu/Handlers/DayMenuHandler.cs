@@ -18,7 +18,13 @@ public class DayMenuHandler : MonoBehaviour {
         clock = GameObject.FindGameObjectWithTag ( "Clock" ).GetComponent<Clock>();
         player =GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         startDay = clock.day;
-        if (player.wentToClass)
+        if (player.startDayLate)
+        {
+            goToClass.interactable = false;
+            (goToClass.GetComponentInChildren<Text>()).text = "Student Athletes must go to class";
+            player.exhaustion = 40;
+        }
+        else if (player.wentToClass)
         {
             player.exhaustion = 20;
         }
@@ -31,6 +37,15 @@ public class DayMenuHandler : MonoBehaviour {
     }
     void Start () {
         player.homework += 1; //todo decide what homework value this should be
+        if (player.Rich)
+        {
+            if (player.family < 10)//todo decide this value
+            {
+                //TODO display popup letting player know this will happen
+                player.money = 0;
+                player.Rich = false;
+            }
+        }
 	}
 	
 	// Update is called once per frame
@@ -52,11 +67,7 @@ public class DayMenuHandler : MonoBehaviour {
      **/
     public void Back()
     {
-        //since these don't destroy on their own, we need to destroy them when they aren't being used
-        Destroy(player.gameObject);
-        Destroy(clock.gameObject);
-        SceneManager.LoadScene(0);
-
+        SceneManager.LoadScene(4);
     }
     /** EndDay()
      * Ends the day and go to the next day 
@@ -89,13 +100,39 @@ public class DayMenuHandler : MonoBehaviour {
                 break;
             case 2:
                 chosenTask.text = "Do Job";
-                player.MoneyMod(30);
+                if (player.TA)
+                {
+                    player.MoneyMod(60);
+                }
+                else if (player.Otaku)
+                {
+                    player.MoneyMod(15);
+                }
+                else
+                {
+                    player.MoneyMod(30);
+                }
+                if (player.GOD)
+                {
+                    player.StressMod(-5);
+                }
+                else{
+                    player.StressMod(5);
+                }
                 break;
             case 3:
-                chosenTask.text = "Do Homework";
-                player.HomeworkMod(-25);
-                player.StressMod(5);
-                break;
+                if (player.Hidden)
+                {
+                    chosenTask.text = "To high to do Homework";
+                    return;
+                }
+                else
+                {
+                    chosenTask.text = "Do Homework";
+                    player.HomeworkMod(-25);
+                    player.StressMod(5);
+                    break;
+                }
             case 4:
                 if(player.homework > 50)
                 {
@@ -116,7 +153,14 @@ public class DayMenuHandler : MonoBehaviour {
             case 5:
                 chosenTask.text = "Study";
                 player.HomeworkMod(-15);
-                player.StressMod(10);
+                if (player.GOD)
+                {
+                    player.StressMod(-10);
+                }
+                else
+                {
+                    player.StressMod(10);
+                }
                 break;
             case 6:
                 chosenTask.text = "Play Video Games";
@@ -147,6 +191,10 @@ public class DayMenuHandler : MonoBehaviour {
                 }
                 clock.ChangeHour(1);
                 player.ExhaustionMod(-5);
+                if (player.GOD)
+                {
+                    player.StressMod(-5);
+                }
                 return;
             default:
                 chosenTask.text = "This shouldn't happen";
