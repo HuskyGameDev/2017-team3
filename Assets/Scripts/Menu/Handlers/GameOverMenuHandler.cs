@@ -2,17 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverMenuHandler : MonoBehaviour {
     Clock clock;
     Player player;
-	// Use this for initialization
-	void Start () {
+    public Text results;
+    // Use this for initialization
+    void Start () {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         //TODO display if the player was successful or not as well as end stats
-    }
+        UnlockRewards unlocking = new UnlockRewards();
+        Unlocked data = new Unlocked();
+        unlocking.unlock(player, clock, data);
+        results.text = "Results for " + player.PlayerName + ":\nStress: " + player.stress.ToString()
+            + "/100\nHomework: " + player.homework.ToString()
+            + "/200\nMoney: $" + player.money.ToString()
+            + "\nStrength: " + player.strength.ToString()
+            + "/100\nDexterity: " + player.dexterity.ToString()
+            + "/100\nConstitution: "+player.constitution.ToString()
+            + "/100\nWisdom: " +player.wisdom.ToString()
+            + "/100\nIntelligence: "+player.intelligence.ToString()
+            + "/100\nCharisma: "+player.charisma.ToString()
+            + "/100\nFriends: " + player.friends.ToString()
+            + "/100\nFamily: "+player.family.ToString()
+            + "/100\nUnlocked:";
+        if (data.endless)
+            results.text += "\nEndless Mode";
+        if (data.student_Council)
+            results.text += "\nStudent Council Class";
+        if (data.athlete)
+            results.text += "\nAthlete Class";
+        if (data.cheer)
+            results.text += "\nCheer Class";
+        if (data.band)
+            results.text += "\nBand Class";
+        if (data.nerd)
+            results.text += "\nNerd Class";
+        if (data.TA)
+            results.text += "\nTeacher's Assistant Class";
+        if (data.greek)
+            results.text += "\nGreek Class";
+        if (data.hidden)
+            results.text += "\nStoner Class";
+        if (data.tryHard)
+            results.text += "\nTryHard Class";
+        if (data.rich_Kid)
+            results.text += "\nRick Kid Class";
+        if (data.microManaged)
+            results.text += "\nMicroManaged Class";
+        if (data.otaku)
+            results.text += "\nOtaku Class";
+        if (data.ROTC)
+            results.text += "\nROTC Class";
+        if (data.GOD)
+            results.text += "\nGOD Class";
+}
 	
 	// Update is called once per frame
 	void Update () {

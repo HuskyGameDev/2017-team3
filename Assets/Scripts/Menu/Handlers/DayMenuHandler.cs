@@ -18,6 +18,10 @@ public class DayMenuHandler : MonoBehaviour {
         clock = GameObject.FindGameObjectWithTag ( "Clock" ).GetComponent<Clock>();
         player =GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         startDay = clock.day;
+        if (!clock.endless && clock.day > 75)
+        {
+            SceneManager.LoadScene(4);
+        }
         if (player.startDayLate)
         {
             goToClass.interactable = false;
@@ -50,7 +54,6 @@ public class DayMenuHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
         TempBars.text = player.PlayerName +"\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
         if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
@@ -85,7 +88,10 @@ public class DayMenuHandler : MonoBehaviour {
             chosenTask.text = "No More Energy";
             return;
         }
-        //TODO Stop people from napping after midnight
+        if (player.GOD)
+        {
+            player.MoneyMod(30);
+        }
         //determine what button was clicked
         switch (i)
 		// Calls task to preform the task
@@ -220,6 +226,9 @@ public class DayMenuHandler : MonoBehaviour {
         {
             mult *= 4;
         }
-        player.ExhaustionMod(10*mult);
+        if (!player.GOD)
+        {
+            player.ExhaustionMod(10 * mult);
+        }
     }
 }
