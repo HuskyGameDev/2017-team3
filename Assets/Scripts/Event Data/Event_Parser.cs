@@ -105,31 +105,39 @@ public class Event_Parser{
 
         //str threshold
         line = line.Remove(0, line.IndexOf('s') + 4);
-        uint str = Convert.ToUInt32(line.Substring(0, line.IndexOf('d')));
+        int str = Convert.ToInt32(line.Substring(0, line.IndexOf('d')));
 
         //dex threshold
         line = line.Remove(0, line.IndexOf('d') + 4);
-        uint dex = Convert.ToUInt32(line.Substring(0, line.IndexOf('c')));
+        int dex = Convert.ToInt32(line.Substring(0, line.IndexOf('c')));
 
         //con threshold
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint con = Convert.ToUInt32(line.Substring(0, line.IndexOf('i')));
+        int con = Convert.ToInt32(line.Substring(0, line.IndexOf('i')));
 
         //int threshold
         line = line.Remove(0, line.IndexOf('i') + 4);
-        uint inte = Convert.ToUInt32(line.Substring(0, line.IndexOf('w')));
+        int inte = Convert.ToInt32(line.Substring(0, line.IndexOf('w')));
 
         //wis threshold
         line = line.Remove(0, line.IndexOf('w') + 4);
-        uint wis = Convert.ToUInt32(line.Substring(0, line.IndexOf('c')));
+        int wis = Convert.ToInt32(line.Substring(0, line.IndexOf('c')));
 
         //cha threshold
         line = line.Remove(0, line.IndexOf('c') + 4);
-        uint cha = Convert.ToUInt32(line.Substring(0, line.IndexOf('w')));
+        int cha = Convert.ToInt32(line.Substring(0, line.IndexOf('w')));
 
         //weight modifier
         line = line.Remove(0, line.IndexOf('w') + 2);
-        int w = Convert.ToInt32(line.Substring(0, line.IndexOf('#')));
+        int w = Convert.ToInt32(line.Substring(0, line.IndexOf('f')));
+
+        //family threshold
+        line = line.Remove(0, line.IndexOf('f') + 4);
+        int fam = Convert.ToInt32(line.Substring(0, line.IndexOf('f')));
+
+        //friend threshold
+        line = line.Remove(0, line.IndexOf('f') + 4);
+        int friends = Convert.ToInt32(line.Substring(0, line.IndexOf('f')));
 
         //check for presence of options
         line = line.Remove(0, line.IndexOf('#') + 4);
@@ -141,7 +149,7 @@ public class Event_Parser{
             line = file.ReadLine();
             options.Add(BuildOption(line)); //read each option line by line
         }
-        return new Event(s, h, e, m, str, dex, con, wis, inte, cha, new List<Options>(), description, w, new List<Event>(), name, false, false);
+        return new Event(s, h, e, m, str, dex, con, wis, inte, cha, fam, friends, options, description, w, new List<Event>(), name, false, false);
     }
 
     /**
@@ -176,7 +184,7 @@ public class Event_Parser{
 
         //str change
         line = line.Remove(0, line.IndexOf('s') + 4);
-        int dstr = Convert.ToInt32(line.Substring(0, line.IndexOf('d') - 1));
+        int dstr = Convert.ToInt32(line.Substring(0, line.IndexOf('d')));
 
         //dex change
         line = line.Remove(0, line.IndexOf('d') + 5);
@@ -184,19 +192,27 @@ public class Event_Parser{
 
         //con change
         line = line.Remove(0, line.IndexOf('c') + 4);
-        int dcon = Convert.ToInt32(line.Substring(0, line.IndexOf('i') - 1));
-
-        //int change
-        line = line.Remove(0, line.IndexOf('i') + 4);
-        int dinte = Convert.ToInt32(line.Substring(0, line.IndexOf('w') - 1));
+        int dcon = Convert.ToInt32(line.Substring(0, line.IndexOf('w') - 1));
 
         //wis change
         line = line.Remove(0, line.IndexOf('w') + 4);
-        int dwis = Convert.ToInt32(line.Substring(0, line.IndexOf('c') - 1));
+        int dwis = Convert.ToInt32(line.Substring(0, line.IndexOf('i') - 1));
+
+        //int change
+        line = line.Remove(0, line.IndexOf('i') + 4);
+        int dinte = Convert.ToInt32(line.Substring(0, line.IndexOf('c') - 1));
 
         //cha change
         line = line.Remove(0, line.IndexOf('c') + 4);
-        int dcha = Convert.ToInt32(line.Substring(0, line.IndexOf('s') - 1));
+        int dcha = Convert.ToInt32(line.Substring(0, line.IndexOf('f') - 1));
+
+        //family change
+        line = line.Remove(0, line.IndexOf('f') + 4);
+        int dfam = Convert.ToInt32(line.Substring(0, line.IndexOf('f') - 1));
+
+        //friend change
+        line = line.Remove(0, line.IndexOf('c') + 4);
+        int dfri = Convert.ToInt32(line.Substring(0, line.IndexOf('s') - 1));
 
         //stress change
         line = line.Remove(0, line.IndexOf('s') + 2);
@@ -213,7 +229,7 @@ public class Event_Parser{
         //money change
         line = line.Remove(0, line.IndexOf('m') + 2);
         float dm = Convert.ToSingle(line.Substring(0, line.IndexOf(';')));
-        return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha, ds, dh, de, dm, name, description);
+        return new Options(s, h, e, m, dstr, ddex, dcon, dwis, dinte, dcha, dfam, dfri, ds, dh, de, dm, name, description);
     }
 
     /**
