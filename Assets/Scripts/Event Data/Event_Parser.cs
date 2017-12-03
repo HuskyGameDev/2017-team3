@@ -80,11 +80,11 @@ public class Event_Parser{
     {
         //remove "e-{" and read name field
         line = line.Remove(0, 3);
-        string name = ReadString(line);
+        string name = line.Substring(0, line.IndexOf('{'));
 
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
-        string description = ReadString(line);
+        string description = line.Substring(0, line.IndexOf('{'));
         //cut off the description, begin reading ints and such, oh boy
 
         //stress threshold
