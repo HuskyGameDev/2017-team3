@@ -147,28 +147,46 @@ public class EventMenuHandler : MonoBehaviour {
         }
         else
         {
+            string optionTitle;
             List<Options> eventOptions = todaysEvent.eventChosen();
             switch (i)//chose what option had was chosen and update info accordingly 
             {
                 case 4:
                     choiceDescription.text = eventOptions[3].text;
                     eventOptions[3].updatePlayer(player);
+                    optionTitle = eventOptions[3].name;
                     break;
                 case 3:
                     choiceDescription.text = eventOptions[2].text;
                     eventOptions[2].updatePlayer(player);
+                    optionTitle = eventOptions[2].name;
                     break;
                 case 2:
                     choiceDescription.text = eventOptions[1].text;
                     eventOptions[1].updatePlayer(player);
+                    optionTitle = eventOptions[1].name;
                     break;
                 case 1:
                     choiceDescription.text = eventOptions[0].text;
                     eventOptions[0].updatePlayer(player);
+                    optionTitle = eventOptions[0].name;
                     break;
                 default:
                     choiceDescription.text = "ERROR there!";
+                    optionTitle = "";
                     break;
+            }
+            if(optionTitle.Equals("Student Council Unlock"))
+            {
+                player.unlockStudentCouncil();
+            }
+            if(optionTitle.Equals("TA Unlock"))
+            {
+                player.unlockTA();
+            }
+            if (optionTitle == "Greek Unlock")
+            {
+                player.unlockGreek();
             }
         }
     }
@@ -178,10 +196,7 @@ public class EventMenuHandler : MonoBehaviour {
      **/
     public void back()
     {
-        //since these don't destroy on their own, we need to destroy them when they aren't being used
-        Destroy(player.gameObject);
-        Destroy(clock.gameObject);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
     }
     /**
      * NextDay()
@@ -189,7 +204,7 @@ public class EventMenuHandler : MonoBehaviour {
      * */
     public void NextDay()
     {
-        clock.IncrementDay(player.wentToClass);
+        clock.IncrementDay(player.wentToClass, player.startDayLate);
         SceneManager.LoadScene(2);
     }
 
