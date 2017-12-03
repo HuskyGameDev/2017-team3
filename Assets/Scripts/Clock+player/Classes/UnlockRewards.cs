@@ -7,6 +7,8 @@ public class UnlockRewards{
     private int y = 25;
     public void unlock(Player P)
     {
-        
+        bool lowStr, highStr, lowDex, highDex, lowCon, highCon, lowInt, highInt, lowWis, highWis, lowChar, highChar, lowStress, highStress, lowMoney, highMoney, lowFam, highFam, lowFri, highFri;
+        lowStr = P.strength < y;
+
     }
 }

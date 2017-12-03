@@ -20,6 +20,8 @@ public class Player : MonoBehaviour {
     public int wisdom;
     public int intelligence;
     public int charisma;
+    public int friends;
+    public int family;
     static Player instance;
 
     //individaul flags for effects due to class roles
