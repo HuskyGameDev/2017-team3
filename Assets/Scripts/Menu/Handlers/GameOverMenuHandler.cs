@@ -17,7 +17,7 @@ public class GameOverMenuHandler : MonoBehaviour {
         UnlockRewards unlocking = new UnlockRewards();
         Unlocked data = new Unlocked();
         unlocking.unlock(player, clock, data);
-        results.text = "Results for " + player.name + ":\nStress: " + player.stress.ToString()
+        results.text = "Results for " + player.PlayerName + ":\nStress: " + player.stress.ToString()
             + "/100\nHomework: " + player.homework.ToString()
             + "/200\nMoney: $" + player.money.ToString()
             + "\nStrength: " + player.strength.ToString()
@@ -26,8 +26,40 @@ public class GameOverMenuHandler : MonoBehaviour {
             + "/100\nWisdom: " +player.wisdom.ToString()
             + "/100\nIntelligence: "+player.intelligence.ToString()
             + "/100\nCharisma: "+player.charisma.ToString()
-            + "/100\nFriends: ";
-    }
+            + "/100\nFriends: " + player.friends.ToString()
+            + "/100\nFamily: "+player.family.ToString()
+            + "/100\nUnlocked:";
+        if (data.endless)
+            results.text += "\nEndless Mode";
+        if (data.student_Council)
+            results.text += "\nStudent Council Class";
+        if (data.athlete)
+            results.text += "\nAthlete Class";
+        if (data.cheer)
+            results.text += "\nCheer Class";
+        if (data.band)
+            results.text += "\nBand Class";
+        if (data.nerd)
+            results.text += "\nNerd Class";
+        if (data.TA)
+            results.text += "\nTeacher's Assistant Class";
+        if (data.greek)
+            results.text += "\nGreek Class";
+        if (data.hidden)
+            results.text += "\nStoner Class";
+        if (data.tryHard)
+            results.text += "\nTryHard Class";
+        if (data.rich_Kid)
+            results.text += "\nRick Kid Class";
+        if (data.microManaged)
+            results.text += "\nMicroManaged Class";
+        if (data.otaku)
+            results.text += "\nOtaku Class";
+        if (data.ROTC)
+            results.text += "\nROTC Class";
+        if (data.GOD)
+            results.text += "\nGOD Class";
+}
 	
 	// Update is called once per frame
 	void Update () {

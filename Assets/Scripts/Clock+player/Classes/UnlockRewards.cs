@@ -79,7 +79,7 @@ public class UnlockRewards{
             P.data.greek = true;
             results.greek = true;
         }
-        if(!P.data.hidden && P.name.Equals("upupdowndownleftrightleftrightba", System.StringComparison.InvariantCultureIgnoreCase))
+        if(!P.data.hidden && P.PlayerName.Equals("upupdowndownleftrightleftrightba", System.StringComparison.InvariantCultureIgnoreCase))
         {
             P.data.hidden = true;
             results.hidden = true;

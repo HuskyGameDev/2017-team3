@@ -20,7 +20,7 @@ public class Event {
     string eventName;
     int weight;
     List<Event> nextEvents;
-    bool repeatable;
+    public bool repeatable;
     bool start;
     bool endless;
 
