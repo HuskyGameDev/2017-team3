@@ -7,6 +7,7 @@ public class Clock : MonoBehaviour {
     public int time;
     protected int startDay = 6; // starting at 6 am if the player didn't go to class
     protected int startDayWClass = 16; // starting at 4 pm if the player did go to calss, can be adjusted
+    protected int startDayWAct = 18;
     static Clock instance;
     void Awake()
     {
@@ -57,9 +58,13 @@ public class Clock : MonoBehaviour {
             time = newtime;
         }
     }
-    public void IncrementDay (bool Went)
+    public void IncrementDay (bool Went, bool act)
     {
         //if all we need to do is increase the day by one, then we should use this
+        if (act)
+        {
+            time = startDayWAct;
+        }
         if (Went)//if the student went to class
         {
             //start day at 4 pm
