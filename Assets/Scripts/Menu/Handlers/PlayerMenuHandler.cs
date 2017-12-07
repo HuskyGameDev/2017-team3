@@ -45,7 +45,85 @@ public class PlayerMenuHandler : MonoBehaviour {
             case 2:
                 if(chosenClass == 2)
                 {
+                    perks.text = "Perks: Charisma, wisdom, and stress up. Start with more exhaustion and start days later ";
+                }
+                break;
+            case 3:
+                if(chosenClass == 3)
+                {
                     perks.text = "Perks: Strength, Dexterity and Stress Up. Intelligence, Wisdom down and start with more exhaustion and start days later";
+                }
+                break;
+            case 4:
+                if(chosenClass == 4)
+                {
+                    perks.text = "Perks: Charisma, friend relations up. Start with more exhaustion and start days later";
+                }
+                break;
+            case 5:
+                if(chosenClass == 5)
+                {
+                    perks.text = "Perks: Intelligence and wisdom up. Strength and Dexterity down";
+                }
+                break;
+            case 6:
+                if (chosenClass == 6)
+                {
+                    perks.text = "Perks: Double the money when you 'Do Job', Wisdom and Stress up.";
+                }
+                break;
+            case 7:
+                if (chosenClass == 7)
+                {
+                    perks.text = "Perks: Friends and charisma up. Wisdom down.";
+                }
+                break;
+            case 8:
+                if (chosenClass == 8)
+                {
+                    perks.text = "Perks: Intelligence, wisdom, constitution, stress, and money up";
+                }
+                break;
+            case 9:
+                if (chosenClass == 9)
+                {
+                    perks.text = "Perks: Money way up! Friend relations, family relations up. If family relation drops too low: you will become a Nobody";
+                }
+                break;
+            case 10:
+                if (chosenClass == 10)
+                {
+                    perks.text = "Perks: Charisma, wisdom, and stress up. Start with more exhaustion and start days later";
+                }
+                break;
+            case 11:
+                if (chosenClass == 11)
+                {
+                    perks.text = "Perks: Everything up and stress really high";
+                }
+                break;
+            case 12:
+                if (chosenClass == 12)
+                {
+                    perks.text = "Perks: Low charisma skills and only get half of job money";
+                }
+                break;
+            case 13:
+                if (chosenClass == 13)
+                {
+                    perks.text = "Perks: Strength, dexterity, constitution, stress up. Personal respect";
+                }
+                break;
+            case 14:
+                if (chosenClass == 14)
+                {
+                    perks.text = "Perks: Max stats, everything reduces stress and everything increases money";
+                }
+                break;
+            case 15:
+                if (chosenClass == 15)
+                {
+                    perks.text = "Perks: Minimum stats, no money, no stress, unable to do homework";
                 }
                 break;
         }
