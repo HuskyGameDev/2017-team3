@@ -1692,7 +1692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7d01bc933f27143a65ab22c43e8d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
   AudioSource: {fileID: 1886527899}
   ClickSound: {fileID: 8300000, guid: 3190fe4884ea3a843b5c523e9988f546, type: 3}
 --- !u!1 &683960305
