@@ -71,6 +71,7 @@ public class GameOverMenuHandler : MonoBehaviour {
      **/
     public void back()
     {
+        XML_Save save = new XML_Save(player.data);
         //TODO save data here if something was unlocked or new high score
         Destroy(player.gameObject);
         Destroy(clock.gameObject);
