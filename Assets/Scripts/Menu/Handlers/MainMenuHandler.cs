@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuHandler : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    private const string ADDRESS = "savedData";
+    // Use this for initialization
+    void Start () {
 		//TODO load previous game data
 	}
 	
@@ -22,5 +22,12 @@ public class MainMenuHandler : MonoBehaviour {
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+    public void deleteSaveData()
+    {
+        if (PlayerPrefs.HasKey(ADDRESS))
+        {
+            PlayerPrefs.DeleteKey(ADDRESS);
+        }
     }
 }

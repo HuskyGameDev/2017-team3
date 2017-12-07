@@ -54,6 +54,7 @@ public class PlayerMenuHandler : MonoBehaviour {
         //TODO add a endless flag and check it
         clock.endless = false;
         //get the player's name from the inputfield and store it in player
+        XML_Load data = new XML_Load(ref (player.data));
         player.PlayerName = nameInput.text;
         SceneManager.LoadScene(2);
     }
