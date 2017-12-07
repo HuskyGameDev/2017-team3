@@ -27,7 +27,10 @@ public class EventSelector {
                 break;
             }
         }
-        choices.Remove(chosen);
+        if (!chosen.repeatable)
+        {
+            choices.Remove(chosen);
+        }
         foreach(Event e in chosen.getNextEvents())
         {
             p.CurrentEvents.Add(e);

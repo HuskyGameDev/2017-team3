@@ -8,6 +8,7 @@ public class Clock : MonoBehaviour {
     protected int startDay = 6; // starting at 6 am if the player didn't go to class
     protected int startDayWClass = 16; // starting at 4 pm if the player did go to calss, can be adjusted
     protected int startDayWAct = 18;
+    public bool endless;
     static Clock instance;
     void Awake()
     {

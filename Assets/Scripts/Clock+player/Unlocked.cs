@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Unlocked
 {
-    bool endless;
-    bool student_Council;
-    bool athlete;
-    bool cheer;
-    bool band;
-    bool nerd;
-    bool TA;
-    bool greek;
-    bool hidden;
-    bool tryHard;
-    bool rich_Kid;
-    bool microManaged;
-    bool otaku;
-    bool ROTC;
-    bool GOD;
-    int highScore;
+    public bool endless;
+    public bool student_Council;
+    public bool athlete;
+    public bool cheer;
+    public bool band;
+    public bool nerd;
+    public bool TA;
+    public bool greek;
+    public bool hidden;
+    public bool tryHard;
+    public bool rich_Kid;
+    public bool microManaged;
+    public bool otaku;
+    public bool ROTC;
+    public bool GOD;
+    public int highScore;
     public Unlocked()
     {
         endless = false;

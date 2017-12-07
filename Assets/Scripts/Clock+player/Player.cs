@@ -33,9 +33,9 @@ public class Player : MonoBehaviour {
     public bool ROTC;//we may not need to use this
     public bool GOD;
     public List<Event> CurrentEvents;
-    private bool eventUnlock1;
-    private bool eventUnlock2;
-    private bool eventUnlock3;
+    public bool eventUnlock1;
+    public bool eventUnlock2;
+    public bool eventUnlock3;
     void Awake()
     {
         eventUnlock1 = false;
