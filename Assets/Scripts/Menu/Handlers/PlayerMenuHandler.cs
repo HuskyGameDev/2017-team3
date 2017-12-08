@@ -156,7 +156,7 @@ public class PlayerMenuHandler : MonoBehaviour {
         player.wisdom = 10;
         player.family = 10;
         player.friends = 10;
-        player.exhaustion = 10;
+        player.stress = 10;
         player.money = Random.value * 2000.0f;
         switch (chosenClass)
         {
@@ -182,7 +182,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.dexterity = 20;
                     player.intelligence = 5;
                     player.wisdom = 5;
-                    player.exhaustion = 20;
+                    player.stress = 20;
                 }
                 break;
             case 4:
@@ -190,7 +190,6 @@ public class PlayerMenuHandler : MonoBehaviour {
                 {
                     player.charisma = 20;
                     player.friends = 20;
-                    player.exhaustion = 20;
                 }
                 break;
             case 5:
@@ -206,6 +205,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 if (chosenClass == 6)
                 {
                     player.wisdom = 20;
+                    player.stress = 20;
                 }
                 break;
             case 7:
@@ -214,6 +214,90 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.friends = 20;
                     player.charisma = 20;
                     player.wisdom = 5;
+                }
+                break;
+            case 8:
+                if (chosenClass == 8)
+                {
+                    player.intelligence = 20;
+                    player.wisdom = 20;
+                    player.constitution = 20;
+                    player.stress = 20;
+                    player.money = Random.value * 2000.0f + 350;
+                }
+                break;
+            case 9:
+                if (chosenClass == 9)
+                {
+                    player.friends = 20;
+                    player.money = 9000;
+                }
+                break;
+            case 10:
+                if (chosenClass == 10)
+                {
+                    player.charisma = 20;
+                    player.wisdom = 20;
+                    player.exhaustion = 20;
+                }
+                break;
+            case 11:
+                if (chosenClass == 11)
+                {
+                    player.strength = 20;
+                    player.dexterity = 20;
+                    player.constitution = 20;
+                    player.intelligence = 20;
+                    player.charisma = 20;
+                    player.wisdom = 20;
+                    player.family = 20;
+                    player.friends = 20;
+                    player.stress = 30;
+                    player.money = Random.value * 2000.0f + 350;
+                }
+                break;
+            case 12:
+                if (chosenClass == 12)
+                {
+                    player.charisma = 5;
+                }
+                break;
+            case 13:
+                if (chosenClass == 13)
+                {
+                    player.strength = 20;
+                    player.dexterity = 20;
+                    player.constitution = 20;
+                    player.stress = 20;
+                }
+                break;
+            case 14:
+                if (chosenClass == 14)
+                {
+                    player.strength = 100;
+                    player.dexterity = 100;
+                    player.constitution = 100;
+                    player.intelligence = 100;
+                    player.charisma = 100;
+                    player.wisdom = 100;
+                    player.family = 100;
+                    player.friends = 100;
+                    player.stress = 0;
+                }
+                break;
+            case 15:
+                if (chosenClass == 15)
+                {
+                    player.strength = 0;
+                    player.dexterity = 0;
+                    player.constitution = 0;
+                    player.intelligence = 0;
+                    player.charisma = 0;
+                    player.wisdom = 0;
+                    player.family = 0;
+                    player.friends = 1;
+                    player.stress = 0;
+                    player.money = 0;
                 }
                 break;
         }
