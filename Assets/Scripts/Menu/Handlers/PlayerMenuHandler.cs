@@ -185,6 +185,37 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.exhaustion = 20;
                 }
                 break;
+            case 4:
+                if (chosenClass == 4)
+                {
+                    player.charisma = 20;
+                    player.friends = 20;
+                    player.exhaustion = 20;
+                }
+                break;
+            case 5:
+                if (chosenClass == 5)
+                {
+                    player.intelligence = 20;
+                    player.wisdom = 20;
+                    player.strength = 5;
+                    player.dexterity = 5;
+                }
+                break;
+            case 6:
+                if (chosenClass == 6)
+                {
+                    player.wisdom = 20;
+                }
+                break;
+            case 7:
+                if (chosenClass == 7)
+                {
+                    player.friends = 20;
+                    player.charisma = 20;
+                    player.wisdom = 5;
+                }
+                break;
         }
         //TODO add a endless flag and check it
         clock.endless = false;
