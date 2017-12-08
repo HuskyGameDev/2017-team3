@@ -12,13 +12,13 @@ public class PlayerMenuHandler : MonoBehaviour {
     Player player;
     int chosenClass;
     // Use this for initialization
-    void Start () {
-        XML_Load data = new XML_Load(ref (player.data));
+    void Start() { 
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         player.family = 50;
         player.friends = 50;
+        XML_Load data = new XML_Load(ref (player.data));
     }
 	
 	// Update is called once per frame
