@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class PlayerMenuHandler : MonoBehaviour {
     public Text Selection;
     public InputField nameInput;
@@ -146,6 +147,44 @@ public class PlayerMenuHandler : MonoBehaviour {
     **/
     public void StartGame()
     {
+        player.strength = 10;
+        player.dexterity = 10;
+        player.constitution = 10;
+        player.intelligence = 10;
+        player.charisma = 10;
+        player.wisdom = 10;
+        player.family = 10;
+        player.friends = 10;
+        player.exhaustion = 10;
+        player.money = Random.value * 2000.0f;
+        switch (chosenClass)
+        {
+            case 1:
+                if (chosenClass == 1)
+                {
+                  
+                }
+                break;
+            case 2:
+                if (chosenClass == 2)
+                {
+                    player.charisma = 20;
+                    player.wisdom = 20;
+                    player.stress = 20;
+                    player.exhaustion = 20;
+                }
+                break;
+            case 3:
+                if (chosenClass == 3)
+                {
+                    player.strength = 20;
+                    player.dexterity = 20;
+                    player.intelligence = 5;
+                    player.wisdom = 5;
+                    player.exhaustion = 20;
+                }
+                break;
+        }
         //TODO add a endless flag and check it
         clock.endless = false;
         //get the player's name from the inputfield and store it in player
