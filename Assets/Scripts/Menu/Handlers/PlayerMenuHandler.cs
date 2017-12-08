@@ -15,6 +15,7 @@ public class PlayerMenuHandler : MonoBehaviour {
     public Text perks;
     // Use this for initialization
     void Start () {
+        XML_Load data = new XML_Load(ref (player.data));
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
@@ -188,7 +189,6 @@ public class PlayerMenuHandler : MonoBehaviour {
         //TODO add a endless flag and check it
         clock.endless = false;
         //get the player's name from the inputfield and store it in player
-        XML_Load data = new XML_Load(ref (player.data));
         player.PlayerName = nameInput.text;
         SceneManager.LoadScene(2);
     }

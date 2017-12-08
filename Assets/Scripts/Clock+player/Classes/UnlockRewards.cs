@@ -3,39 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UnlockRewards{
-    private int x = 75;
-    private int y = 25;
+    private int x = 75; //our designated high value;
+    private int y = 25; //our desiganted low value
+    /**
+     * parameters:
+     * P= the player
+     * c= clock
+     * results = return values to let menu know what was unlocked
+     */
     public void unlock(Player P, Clock c,Unlocked results)
     {
         bool lowStr, highStr, lowDex, highDex, highCon, lowInt, highInt, lowWis, highWis, lowChar, highChar, lowStress, highStress, lowMoney, highMoney, absurdMoney, lowFam, highFam, highFri;
-        lowStr = P.strength <= y;
-        highStr = P.strength >= x;
+        lowStr = P.strength <= y; //does the player have low strength
+        highStr = P.strength >= x; //does the player have high strength
 
-        lowDex = P.dexterity <= y;
-        highDex = P.dexterity >= x;
+        lowDex = P.dexterity <= y; //does the player have low dexterity
+        highDex = P.dexterity >= x; //does the player have high dexterity
 
-        highCon = P.constitution >= x;
+        highCon = P.constitution >= x; //does the player have high constitution
 
-        lowInt = P.intelligence <= y;
-        highInt = P.intelligence >= x;
+        lowInt = P.intelligence <= y; //does the player have low intelligence
+        highInt = P.intelligence >= x; //does the playet have high intelligence
 
-        lowWis = P.wisdom <= y;
-        highWis = P.wisdom >= x;
+        lowWis = P.wisdom <= y; //does the player have low wisdom
+        highWis = P.wisdom >= x; //does the player have high wisdom
 
-        lowChar = P.charisma <= y;
-        highChar = P.charisma >= x;
+        lowChar = P.charisma <= y; //does the player have low charisma
+        highChar = P.charisma >= x; //does the player have high charisma
 
-        lowStress = P.stress <= y;
-        highStress = P.stress >= x;
+        lowStress = P.stress <= y; //does the player have low stress
+        highStress = P.stress >= x; //does the player have high stress
 
-        lowMoney = P.money < 25.0f;
-        highMoney = P.money >= 75.0f;
-        absurdMoney = P.money >= 9000.0f;
+        lowMoney = P.money < 25.0f; //does the player have low money
+        highMoney = P.money >= 75.0f; //does the player have high money
+        absurdMoney = P.money >= 9000.0f; //does the player have an excessive amount of money
 
-        lowFam = P.family <= y;
-        highFam = P.family >= x;
+        lowFam = P.family <= y; //does the player have a bad relationship with family
+        highFam = P.family >= x; //does the player have a good relationship with family
 
-        highFri = P.friends >= x;
+        highFri = P.friends >= x; //does the player have good relationship with friends
+
+
+        /**
+         * Go through pre defined vallues for whether or not a class is unlcoked.
+         * We can't use just 1 because it would easily say what was and was not unlocked
+         */
         if (!P.data.endless && c.day > 75)
         {
             P.data.endless = true;
