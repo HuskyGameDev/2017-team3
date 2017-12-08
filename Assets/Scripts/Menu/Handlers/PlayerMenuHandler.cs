@@ -172,7 +172,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.charisma = 20;
                     player.wisdom = 20;
                     player.stress = 20;
-                    player.exhaustion = 20;
+                    player.startDayLate = true;
                 }
                 break;
             case 3:
@@ -183,6 +183,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.intelligence = 5;
                     player.wisdom = 5;
                     player.stress = 20;
+                    player.startDayLate = true;
                 }
                 break;
             case 4:
@@ -190,6 +191,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 {
                     player.charisma = 20;
                     player.friends = 20;
+                    player.startDayLate = true;
                 }
                 break;
             case 5:
@@ -198,7 +200,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.intelligence = 20;
                     player.wisdom = 20;
                     player.strength = 5;
-                    player.dexterity = 5;
+                    player.dexterity = 5; 
                 }
                 break;
             case 6:
@@ -206,6 +208,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 {
                     player.wisdom = 20;
                     player.stress = 20;
+                    player.TA = true;
                 }
                 break;
             case 7:
@@ -231,6 +234,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 {
                     player.friends = 20;
                     player.money = 9000;
+                    player.Rich = true;
                 }
                 break;
             case 10:
@@ -238,7 +242,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 {
                     player.charisma = 20;
                     player.wisdom = 20;
-                    player.exhaustion = 20;
+                    player.startDayLate = true;
                 }
                 break;
             case 11:
@@ -260,6 +264,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                 if (chosenClass == 12)
                 {
                     player.charisma = 5;
+                    player.Otaku=true;
                 }
                 break;
             case 13:
@@ -269,6 +274,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.dexterity = 20;
                     player.constitution = 20;
                     player.stress = 20;
+                    player.ROTC = true;
                 }
                 break;
             case 14:
@@ -283,6 +289,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.family = 100;
                     player.friends = 100;
                     player.stress = 0;
+                    player.GOD = true;
                 }
                 break;
             case 15:
@@ -298,6 +305,7 @@ public class PlayerMenuHandler : MonoBehaviour {
                     player.friends = 1;
                     player.stress = 0;
                     player.money = 0;
+                    player.Hidden = true;
                 }
                 break;
         }
