@@ -13,10 +13,14 @@ public class GameOverMenuHandler : MonoBehaviour {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
-        //TODO display if the player was successful or not as well as end stats
+ 
+        //see if anything is unlocked
         UnlockRewards unlocking = new UnlockRewards();
         Unlocked data = new Unlocked();
         unlocking.unlock(player, clock, data);
+
+        //display results. 
+        //TODO Change these into progress bars
         results.text = "Results for " + player.PlayerName + ":\nStress: " + player.stress.ToString()
             + "/100\nHomework: " + player.homework.ToString()
             + "/200\nMoney: $" + player.money.ToString()
@@ -29,6 +33,7 @@ public class GameOverMenuHandler : MonoBehaviour {
             + "/100\nFriends: " + player.friends.ToString()
             + "/100\nFamily: "+player.family.ToString()
             + "/100\nUnlocked:";
+        // display what was unlocked
         if (data.endless)
             results.text += "\nEndless Mode";
         if (data.student_Council)
@@ -46,7 +51,7 @@ public class GameOverMenuHandler : MonoBehaviour {
         if (data.greek)
             results.text += "\nGreek Class";
         if (data.hidden)
-            results.text += "\nStoner Class";
+            results.text += "\nAnd you found the Stoner Class.... Great....";
         if (data.tryHard)
             results.text += "\nTryHard Class";
         if (data.rich_Kid)
