@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/** @author Daniel Saltzmann
+ * 
+ * File: UnlockRewards.cs
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

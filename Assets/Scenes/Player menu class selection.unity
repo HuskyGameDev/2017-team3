@@ -3516,7 +3516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: G.O.D(Mitch Davis)
+  m_Text: G.O.D
 --- !u!222 &1565735576
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4140,7 +4140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Frat/ Soroity
+  m_Text: Greek Life
 --- !u!222 &1792930246
 CanvasRenderer:
   m_ObjectHideFlags: 0
