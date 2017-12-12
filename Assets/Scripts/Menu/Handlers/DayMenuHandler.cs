@@ -205,7 +205,7 @@ public class DayMenuHandler : MonoBehaviour {
                 {
                     player.StressMod(-5);
                 }
-                return;
+                break;
             default:
                 chosenTask.text = "This shouldn't happen";
                 break;
