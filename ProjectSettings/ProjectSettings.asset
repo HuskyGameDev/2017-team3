@@ -590,9 +590,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 69a73bda-66d2-428b-9d74-3c665f509962
-  projectName: College Student Simulator
-  organizationId: ccclemmo
+  cloudProjectId: eed4e60a-5140-4e5a-acfe-253ba5290e3b
+  projectName: College Student Simulator (2)
+  organizationId: nerfherder32
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
