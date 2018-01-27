@@ -3516,7 +3516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: G.O.D(Mitch Davis)
+  m_Text: G.O.D
 --- !u!222 &1565735576
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4140,7 +4140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Frat/ Soroity
+  m_Text: Greek Life
 --- !u!222 &1792930246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4642,10 +4642,10 @@ RectTransform:
   m_Father: {fileID: 618690886}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -802.6, y: 179.9}
-  m_SizeDelta: {x: -1864.1, y: -446.2}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 201.59998, y: -102.100006}
+  m_SizeDelta: {x: 144.40002, y: 117.70001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051728720
 MonoBehaviour:
