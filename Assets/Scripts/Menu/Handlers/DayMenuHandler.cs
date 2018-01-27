@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class DayMenuHandler : MonoBehaviour {
     public Text chosenTask;
@@ -35,12 +36,14 @@ public class DayMenuHandler : MonoBehaviour {
         else
         {
             player.exhaustion = 0;
+            System.Random random = new System.Random();
+            player.HomeworkMod(random.Next(0, 20));
 
         }
         
     }
     void Start () {
-        player.homework += 1; //todo decide what homework value this should be
+        player.homework += 5; //todo decide what homework value this should be
         if (player.Rich)
         {
             if (player.family < 10)//todo decide this value
@@ -143,7 +146,7 @@ public class DayMenuHandler : MonoBehaviour {
                 chosenTask.text = "Do Homework";
                 player.ChangeInt(1);
                 player.ChangeWis(1);
-                player.HomeworkMod(-25);
+                player.HomeworkMod(-10);
                 player.StressMod(5);
                 break;
             case 4:
