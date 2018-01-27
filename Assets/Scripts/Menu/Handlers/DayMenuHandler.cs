@@ -135,6 +135,11 @@ public class DayMenuHandler : MonoBehaviour {
                     chosenTask.text = "To high to do Homework";
                     return;
                 }
+                if (player.homework == 0)
+                {
+                    chosenTask.text = "You have no homework";
+                    return;
+                }
                 chosenTask.text = "Do Homework";
                 player.ChangeInt(1);
                 player.ChangeWis(1);
