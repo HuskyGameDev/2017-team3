@@ -151,6 +151,11 @@ public class PlayerMenuHandler : MonoBehaviour {
             case 14://GOD
                 if (!(player.data.GOD))
                 {
+                    if (nameInput.text == "Mitch Davis")
+                    {
+                        perks.text = "Perks: Max stats, everything reduces stress and everything increases money";
+                        break;
+                    }
                     perks.text = "Locked";
                     chosenClass = 1;
                     break;
@@ -160,6 +165,11 @@ public class PlayerMenuHandler : MonoBehaviour {
             case 15://Hidden
                 if (!(player.data.hidden))
                 {
+                    if(nameInput.text == "420")
+                    {
+                        perks.text = "Perks: Minimum stats, no money, no stress, unable to do homework";
+                        break;
+                    }
                     perks.text = "Locked";
                     chosenClass = 1;
                     break;
