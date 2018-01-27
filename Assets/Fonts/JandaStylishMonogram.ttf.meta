@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 143f6b6732c8e284493853c74f5eed7e
+timeCreated: 1517083819
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Janda Stylish Monogram
+  fontNames:
+  - Janda Stylish Monogram
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
