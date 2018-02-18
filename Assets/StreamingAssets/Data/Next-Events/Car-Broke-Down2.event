@@ -1,0 +1,2 @@
+e-{Car broke down again}{This car is going to leave you bankrupt.} s:0 h:20 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:1 fam:0 fri:0 #os:1 #repeat:false
+o-{That was expensive.}{Fix it.} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:25 dh:0 de:20 dm:-500 ;
