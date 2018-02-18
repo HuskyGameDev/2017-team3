@@ -116,7 +116,7 @@ public class Event {
                 return true;
             }
         }
-        else if(threshold <= 0)
+        else if(threshold == 0)
         {
             return true;
         }

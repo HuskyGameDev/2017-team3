@@ -4793,7 +4793,79 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82327464949825704, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82460644062016138, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341814582176070, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82531474187825582, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82071709056311032, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82392086617912318, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82327464949825704, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82324244112785836, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82460644062016138, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82341814582176070, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82531474187825582, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82071709056311032, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82392086617912318, guid: f0500d1393db85b47b57f5cd412ea814,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 82327464949825704, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82324244112785836, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82341814582176070, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82460644062016138, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82071709056311032, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82531474187825582, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
+    - {fileID: 82392086617912318, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f0500d1393db85b47b57f5cd412ea814, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2145400478
