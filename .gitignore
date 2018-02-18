@@ -36,3 +36,16 @@ sysinfo.txt
 *.stamp
 *.log
 Library/assetDatabase3
+.DS_Store
+Assets/Scenes/Main Menu.unity
+Assets/sound and music/SOUNDS/Army M.wav.meta
+Assets/sound and music/SOUNDS/Athlete M.wav.meta
+Assets/sound and music/SOUNDS/EPIC.wav.meta
+Assets/sound and music/SOUNDS/Jock M.wav.meta
+Assets/sound and music/SOUNDS/Nerd M.wav.meta
+Assets/sound and music/SOUNDS/Otaku M.wav.meta
+Assets/sound and music/SOUNDS/Rich M.wav.meta
+Assets/sound and music/SOUNDS/senpai.wav.meta
+Assets/sound and music/SOUNDS/Stoner.wav.meta
+UnityPackageManager/manifest.json
+Assets/Scenes/Main Menu.unity

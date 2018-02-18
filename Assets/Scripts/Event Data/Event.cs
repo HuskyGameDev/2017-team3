@@ -59,21 +59,97 @@ public class Event {
 
     public int getWeight(Player p)
     {
-        bool s = (p.stress < stress)||(stress<=0);
-        bool h = (p.homework < homework)||(homework<=0);
-        bool e = (p.exhaustion < exhaustion)||(exhaustion<=0);
-        bool m = p.money > money;
-        bool str = p.strength > strength;
-        bool dex = p.dexterity > dexterity;
-        bool con = p.constitution > constitution;
-        bool wis = p.wisdom > wisdom;
-        bool it = p.intelligence > intelligence;
-        bool cha = p.charisma > charisma;
+
+        //bool s = (p.stress < stress)||(stress<=0);
+        bool s = translate(p.stress, stress);
+
+        //bool h = (p.homework < homework)||(homework<=0);
+        bool h = translate(p.homework, homework);
+
+        //bool e = (p.exhaustion < exhaustion)||(exhaustion<=0);
+        bool e = translate(p.exhaustion, exhaustion);
+
+        //bool m = p.money < money;
+        bool m = translateF(p.money, money);
+
+        //bool str = p.strength > strength;
+        bool str = translate(p.strength, strength);
+
+        //bool dex = p.dexterity > dexterity;
+        bool dex = translate(p.dexterity, dexterity);
+
+        //bool con = p.constitution > constitution;
+        bool con = translate(p.constitution, constitution);
+
+        //bool wis = p.wisdom > wisdom;
+        bool wis = translate(p.wisdom, wisdom);
+
+        //bool it = p.intelligence > intelligence;
+        bool it = translate(p.intelligence, intelligence);
+
+        //bool cha = p.charisma > charisma;
+        bool cha = translate(p.charisma, charisma);
+
         if (s && h && e && m && str && dex && con && wis && it && cha)
         {
             return weight * 2;
         }
         return weight;
+    }
+
+    bool translate( int playerValue , int threshold)
+    {
+        //if threshold is negative, we want to see if the player's stat is below the absolute value of that stat
+        if( threshold < 0)
+        {
+            if( playerValue < Mathf.Abs(threshold))
+            {
+                return true;
+            }
+           
+        }
+        //otherwise, check if player stat is above that value
+        else if (threshold > 0)
+        {
+            if (playerValue > threshold)
+            {
+                return true;
+            }
+        }
+        else if(threshold <= 0)
+        {
+            return true;
+        }
+        //else, return false;
+        return false;
+    }
+
+    //this is the same thing as above, but for float values
+    bool translateF(float playerValue, float threshold)
+    {
+        //if threshold is negative, we want to see if the player's stat is below the absolute value of that stat
+        if (threshold < 0)
+        {
+            if (playerValue < Mathf.Abs(threshold))
+            {
+                return true;
+            }
+
+        }
+        //otherwise, check if player stat is above that value
+        else if (threshold > 0)
+        {
+            if (playerValue > threshold)
+            {
+                return true;
+            }
+        }
+        else if (threshold <= 0)
+        {
+            return true;
+        }
+        //else, return false;
+        return false;
     }
 
     public List<Options> eventChosen()
