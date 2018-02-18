@@ -165,6 +165,7 @@ public class Event_Parser{
      */
     private Options BuildOption(string line)
     {
+        //Debug.Log(line.Substring(0, line.IndexOf('s') - 1));
         //remove "o-{" and read name field
         line = line.Remove(0, 3);
         string name = ReadString(line);
@@ -220,6 +221,7 @@ public class Event_Parser{
 
         //friend change
         line = line.Remove(0, line.IndexOf('f') + 4);
+        //Debug.Log(line.Substring(0, line.IndexOf('s') - 1));
         int dfri = Convert.ToInt32(line.Substring(0, line.IndexOf('s') - 1));
 
         //stress change

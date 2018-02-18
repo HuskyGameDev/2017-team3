@@ -1,3 +1,136 @@
-e-{Buried in homework}{You have too many assignments and can't handle the stress.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
-o-{name}{description} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:0 dh:0 de:0 dm:0 ;
-//e-{You're broke}{You can barely afford to buy food right now and don't know how you're gonna manage rent. It's really stressing you out.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:0
+//Event 2
+e-{Buried in homework}{You have too many assignments and can't handle the stress.} s:0 h:20 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-5 ds:10 dh:0 de:10 dm:0 ;
+
+//Event 2
+e-{Your family misses you}{You've ignored your family and now they're hurt} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:-20 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:0 ds:5 dh:0 de:0 dm:-25 ;
+
+//Event 2
+e-{You're broke}{You can barely afford to buy food right now and don't know how you're gonna manage rent. It's really stressing you out.} s:0 h:0 e:0 m:-50 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:10 dh:0 de:0 dm:0;
+
+//Event 2
+e-{Free to Play}{You got hooked on a free to play game, microtransactions be damned} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:-15 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Lootbox please}{You have a sense of pride and accomplishment...and also less money} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:-5 dh:0 de:0 dm:-10;
+
+//Event 2
+e-{Homework Session}{You get your shit together and get all your homework done for the week.} s:0 h:40 e:0 m:0 str:0 dex:0 con:0 int:0 wis:15 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{Cool!} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:-5 dh:-10 de:0 dm:0 ;
+
+//Event 2
+e-{“Working together”}{A classmate offers to give you their answers to a hard assignment…..for a price.} s:0 h:40 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:2 #repeat:true
+o-{Pay up}{You’re bad, but your homework is done} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:-20 de:0 dm:0;
+o-{}{You’re bad, but your homework is done} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:-20 de:0 dm:0;
+
+//Event 2
+e-{Family disowned you}{You've ignored your family for too long and now they're done supporting you} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:-5 fri:0 #os:1 #repeat:false
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:0 ds:15 dh:0 de:0 dm:-50 ;
+
+//Event 2
+e-{Low on money}{Can't afford to buy food, lower energy and higher stress until money increases} s:0 h:0 e:0 m:-50 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:10 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{Crossing an icy street}{Your stats will decide whether you injure yourself or survive unscathed} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:10 dh:0 de:10 dm:-5 ;
+
+//Event 2
+e-{Dropped phone}{Your cell phone has broken and now you can't communicate with friends.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-15 ds:10 dh:0 de:0 dm:-50 ;
+
+//Event 2
+e-{Got caught cheating}{You got caught cheating. How are you going to talk your way out of this?} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-20 ds:20 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{Your friends miss you}{You've ignored your friends and now they're hurt} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:-20 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-5 ds:5 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{Your friends disowned you}{You've ignored your friends for too long and now they're done hanging out with you} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:-5 #os:1 #repeat:false
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-5 ds:15 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{It’s so hot}{It’s so damn hot outside} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:10 dh:0 de:20 dm:0 ;
+
+//Event 2
+e-{Illness}{You got sick, you had to take the day off and buy some medicine to get better.} s:0 h:0 e:-20 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-10 ds:10 dh:0 de:10 dm:-30 ;
+
+//Event 2
+e-{Ghost Sighting}{You saw a ghost. You really did. It's a shame your friends don't believe you.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-10 ds:10 dh:0 de:10 dm:0 ;
+
+//Event 2
+e-{Your stress is over 9000}{Your life has been so full of so much shit. You're starting to take it out on the people close to you.} s:70 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-20 dfri:-20 ds:20 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{What a cute squirrel}{That squirrel brought you some cash. It's a shame you found it on the road the next day.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:-10 dh:0 de:0 dm:10 ;
+
+//Event 2
+e-{New Update [?]}{It took some time to install this update. Let's hope it was worth it.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:-10 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{There was a test yesterday}{You forgot that there was a test yesterday} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:-5 ds:5 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{Pop Quiz}{Surprise, your professor gave you a Pop Quiz, hope you studied!} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{Exam Week}{Exams!} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:10 dh:0 de:10 dm:0 ;
+
+//Event 2
+e-{New video game released}{A new video game was released you just had to have it!} s:0 h:20 e:0 m:20 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{Play it!} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-5 ds:-10 dh:10 de:0 dm:-20 ;
+
+//Event 2
+e-{What a dream}{You seemed to have gotten a revelation from your dream last night. A few more bucks seemed to have made their way into your pocket.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:0 dh:0 de:-5 dm:25 ;
+
+//Event 2
+e-{What a dream II}{You seemed to have gotten a revelation from your dream last night. Can you really trust anyone?} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:-5 ds:5 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{Attacked by a stranger}{You were walking home from studying and someone attempted to mug you} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:0 ds:20 dh:0 de:10 dm:-10 ;
+
+//Event 2
+e-{Confess}{You confessed to the person you like most. Unfortunately, you also confessed all of the petty crimes you've commited in the past four months. Enjoy sleeping at jail tonight.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:false
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{Annoying neighbors}{The kids down the hall were playing loud music and you didn't sleep well} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:0 de:10 dm:0 ;
+
+//Event 2
+e-{Mario Party}{Why did you want to play the friendship killer?} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:-5 ds:0 dh:0 de:5 dm:0 ;
+
+//Event 2
+e-{Classes cancelled}{Your professors cancelled class, go on enjoy your day!} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That’s great!} s:-10 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:0 dh:0 de:0 dm:0 ;
+
+//Event 2
+e-{Tooth Fairy}{Despite your age, you still believe in the Tooth Fairy. Luckily, your beliefs weren't short-lived. Unfortunately, your friends still think you're weird.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:5 dfri:0 ds:-5 dh:0 de:-5 dm:1 ;
+
+//Event 2
+e-{Broken Bed}{Your bed broke and you had to replace it.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:false
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:0 dfri:0 ds:5 dh:0 de:10 dm:-100 ;
+
+//Event 2
+e-{Too much work}{You've had too much to do at work lately and have to stay late, your friends and family hate it but at least you're making money.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:-5 ds:5 dh:0 de:10 dm:200 ;
+
+//Event 2
+e-{Too much work}{You've had too much to do at work lately and have to stay late, your friends and family hate it but at least you're making money.} s:0 h:0 e:0 m:0 str:0 dex:0 con:0 int:0 wis:0 cha:0 w:0 fam:0 fri:0 #os:1 #repeat:true
+o-{Ok}{That sucks} s:0 h:0 e:0 m:0 dstr:0 ddex:0 dcon:0 dwis:0 dint:0 dcha:0 dfam:-5 dfri:-5 ds:5 dh:0 de:10 dm:200 ;
