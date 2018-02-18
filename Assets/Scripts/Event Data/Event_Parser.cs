@@ -78,6 +78,7 @@ public class Event_Parser{
      */
     private Event BuildEvent(string line, StreamReader file)
     {
+        //Debug.Log(line);
         //remove "e-{" and read name field
         line = line.Remove(0, 3);
         string name = line.Substring(0, line.IndexOf('{'));
@@ -88,7 +89,8 @@ public class Event_Parser{
         //cut off the description, begin reading ints and such, oh boy
 
         //stress threshold
-        line = line.Remove(0, line.IndexOf('}') + 4);
+        line = line.Remove(0, line.IndexOf('}'));
+        line = line.Remove(0, line.IndexOf(':') + 1);
         int s = Convert.ToInt32(line.Substring(0, line.IndexOf('h')));
 
         //homework threshold
