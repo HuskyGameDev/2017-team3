@@ -18,6 +18,7 @@ public class PlayerMenuHandler : MonoBehaviour {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+        AudioSource sound = gameObject.GetComponent<AudioSource>();
         player.family = 50;
         player.friends = 50;
         XML_Load data = new XML_Load(ref (player.data));
