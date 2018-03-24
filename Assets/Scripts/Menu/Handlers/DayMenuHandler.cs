@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
@@ -13,6 +14,18 @@ public class DayMenuHandler : MonoBehaviour {
     Clock clock;
     Player player;
     int startDay;
+
+    public AudioMixerSnapshot normal;
+    public AudioMixerSnapshot  level1;
+    public AudioMixerSnapshot level2;
+    public AudioMixerSnapshot level3;
+    public AudioMixerSnapshot level4;
+    public AudioMixerSnapshot level5;
+    public AudioMixerSnapshot level6;
+
+
+
+
     // Use this for initialization
     void Awake()
     {
@@ -55,8 +68,48 @@ public class DayMenuHandler : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
-	void Update () {
+
+    void MusicCheck(int stress, int exhaustion)
+    {
+        if (stress >= 90 && exhaustion >= 90)
+        {
+            level6.TransitionTo(0.01F);
+            return;
+        }
+        if (stress >= 80 && exhaustion >= 80)
+        {
+            level5.TransitionTo(0.01F);
+            return;
+        }
+        if (stress >= 70 && exhaustion >= 70)
+        {
+            level4.TransitionTo(0.01F);
+            return;
+        }
+        if (stress >= 60 && exhaustion >= 60)
+        {
+            level3.TransitionTo(0.01F);
+            return;
+        }
+        if (stress >= 50 && exhaustion >= 50)
+        {
+            level2.TransitionTo(0.01F);
+            return;
+        }
+        if (stress >= 30 && exhaustion >= 30)
+        {
+            level1.TransitionTo(0.01F);
+            return;
+        }
+        
+        normal.TransitionTo(0.01F);
+        return;
+        
+    }
+
+
+    // Update is called once per frame
+    void Update () {
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
         TempBars.text = player.PlayerName +"\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
         if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
@@ -64,9 +117,13 @@ public class DayMenuHandler : MonoBehaviour {
             SceneManager.LoadScene(4);
         }
         if (player.stress > 100)
-        {
+        { 
             player.stress = 100;
         }
+
+
+        MusicCheck(player.stress, player.exhaustion);
+        
     }
     /** Back()
      * Destroys objects and returns to main menu

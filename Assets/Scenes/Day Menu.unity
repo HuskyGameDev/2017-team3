@@ -1146,7 +1146,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.152
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1260,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5365307, y: 1}
   m_AnchorMax: {x: 0.5365307, y: 1}
-  m_AnchoredPosition: {x: -0.7499962, y: -50}
+  m_AnchoredPosition: {x: -0.75, y: -50}
   m_SizeDelta: {x: 501.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750314237
@@ -1380,6 +1380,13 @@ MonoBehaviour:
   TempClock: {fileID: 224579009}
   goToClass: {fileID: 835956154}
   TempBars: {fileID: 1633865057}
+  normal: {fileID: 245092555570818870, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level1: {fileID: 245427339867553512, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level2: {fileID: 245523050216553294, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level3: {fileID: 245376299714499018, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level4: {fileID: 245478314723687026, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level5: {fileID: 245411236705671634, guid: 4153bbd5324113848b44880179dfed76, type: 2}
+  level6: {fileID: 245589135983104800, guid: 4153bbd5324113848b44880179dfed76, type: 2}
 --- !u!1 &759690236
 GameObject:
   m_ObjectHideFlags: 0
