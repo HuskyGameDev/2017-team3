@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 
-public class DayMenuHandler : MonoBehaviour {
+public class DayMenuHandler : MonoBehaviour
+{
     public Text chosenTask;
     public Text TempClock;
     public Toggle goToClass;
@@ -16,7 +17,7 @@ public class DayMenuHandler : MonoBehaviour {
     int startDay;
 
     public AudioMixerSnapshot normal;
-    public AudioMixerSnapshot  level1;
+    public AudioMixerSnapshot level1;
     public AudioMixerSnapshot level2;
     public AudioMixerSnapshot level3;
     public AudioMixerSnapshot level4;
@@ -26,11 +27,15 @@ public class DayMenuHandler : MonoBehaviour {
 
 
 
+    private const int NORMAL_EXHAUSTION_MOD = 4;
+    private const int MIDNIGHT_OIL_EXHAUSTION_MOD = 10;
+
+
     // Use this for initialization
     void Awake()
     {
-        clock = GameObject.FindGameObjectWithTag ( "Clock" ).GetComponent<Clock>();
-        player =GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+        clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
+        player = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
         startDay = clock.day;
         if (!clock.endless && clock.day > 75)
         {
@@ -53,9 +58,10 @@ public class DayMenuHandler : MonoBehaviour {
             player.HomeworkMod(random.Next(0, 20));
 
         }
-        
+
     }
-    void Start () {
+    void Start()
+    {
         player.homework += 5; //todo decide what homework value this should be
         if (player.Rich)
         {
@@ -66,8 +72,8 @@ public class DayMenuHandler : MonoBehaviour {
                 player.Rich = false;
             }
         }
-	}
-	
+    }
+
 
     void MusicCheck(int stress, int exhaustion)
     {
@@ -101,29 +107,30 @@ public class DayMenuHandler : MonoBehaviour {
             level1.TransitionTo(0.01F);
             return;
         }
-        
+
         normal.TransitionTo(0.01F);
         return;
-        
+
     }
 
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
-        TempBars.text = player.PlayerName +"\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
+        TempBars.text = player.PlayerName + "\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
         if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
         {
             SceneManager.LoadScene(4);
         }
         if (player.stress > 100)
-        { 
+        {
             player.stress = 100;
         }
 
 
         MusicCheck(player.stress, player.exhaustion);
-        
+
     }
     /** Back()
      * Destroys objects and returns to main menu
@@ -143,7 +150,7 @@ public class DayMenuHandler : MonoBehaviour {
     public void PerformTask(int i)
     {
         //if the player is completely exausted, stop them from doing anything
-        if (player.exhaustion>=100)
+        if (player.exhaustion >= 100)
         {
             chosenTask.text = "No More Energy";
             return;
@@ -154,18 +161,19 @@ public class DayMenuHandler : MonoBehaviour {
         }
         //determine what button was clicked
         switch (i)
-		// Calls task to preform the task
+        // Calls task to preform the task
         {
             case 1:
-                chosenTask.text = "Workout"; 
-				if(player.exhaustion >= 55)
-				{
-					chosenTask.text = "Too tired to workout";
+                chosenTask.text = "Workout";
+                if (player.exhaustion >= 55)
+                {
+                    chosenTask.text = "Too tired to workout";
                     return;
-				}
+                }
                 player.ChangeStr(2);
                 player.ChangeDex(2);
                 player.StressMod(-5);
+                player.ExhaustionMod(10);
                 break;
             case 2:
                 chosenTask.text = "Do Job";
@@ -185,7 +193,8 @@ public class DayMenuHandler : MonoBehaviour {
                 {
                     player.StressMod(-5);
                 }
-                else{
+                else
+                {
                     player.StressMod(5);
                 }
                 break;
@@ -207,7 +216,7 @@ public class DayMenuHandler : MonoBehaviour {
                 player.StressMod(5);
                 break;
             case 4:
-                if(player.homework > 50)
+                if (player.homework > 50)
                 {
                     chosenTask.text = "Cannot go out with friends";
                     return;
@@ -217,7 +226,7 @@ public class DayMenuHandler : MonoBehaviour {
                     chosenTask.text = "You are too broke to go out with Friends";
                     return;
                 }
-                player.ExhaustionMod(10);
+                player.ExhaustionMod(3);
                 chosenTask.text = "Go out with Friends";
                 player.ChangeFri(2);
                 player.ChangeFam(2);
@@ -225,6 +234,11 @@ public class DayMenuHandler : MonoBehaviour {
                 player.MoneyMod(-15);
                 break;
             case 5:
+                if (player.Hidden)
+                {
+                    chosenTask.text = "You are too high to study.";
+                    return;
+                }
                 chosenTask.text = "Study";
                 player.HomeworkMod(-15);
                 player.ChangeInt(2);
@@ -247,7 +261,7 @@ public class DayMenuHandler : MonoBehaviour {
                 chosenTask.text = "Play Video Games";
                 player.StressMod(-25);
                 player.StressMod(-5);
-				player.ExhaustionMod(15);
+                player.ExhaustionMod(5);
                 break;
             case 7:
                 chosenTask.text = "Go Shopping";
@@ -265,7 +279,7 @@ public class DayMenuHandler : MonoBehaviour {
                 {
                     EndDay();
                 }
-                player.ExhaustionMod(-5);
+                player.ExhaustionMod(-10);
                 if (player.GOD)
                 {
                     player.StressMod(-5);
@@ -284,11 +298,11 @@ public class DayMenuHandler : MonoBehaviour {
         {
             mult = clock.time;
         }
-        if(player.stress>50 && player.stress < 75)
+        if (player.stress > 50 && player.stress < 75)
         {
             mult *= 2;
         }
-        if (player.stress > 75 && player.stress<100)
+        if (player.stress > 75 && player.stress < 100)
         {
             mult *= 3;
         }
@@ -296,9 +310,7 @@ public class DayMenuHandler : MonoBehaviour {
         {
             mult *= 4;
         }
-        if (!player.GOD)
-        {
-            player.ExhaustionMod(10 * mult);
-        }
+        int exhaustionMod = (!player.GOD && startDay < clock.day) ? MIDNIGHT_OIL_EXHAUSTION_MOD : NORMAL_EXHAUSTION_MOD;
+        player.ExhaustionMod(exhaustionMod * mult);
     }
 }
