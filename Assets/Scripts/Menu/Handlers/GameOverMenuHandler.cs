@@ -15,7 +15,7 @@ public class GameOverMenuHandler : MonoBehaviour {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
-		gameover.TransitionTo (.05f);
+		gameover.TransitionTo(.05f);
 
  
         //see if anything is unlocked

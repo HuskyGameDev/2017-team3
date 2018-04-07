@@ -137,7 +137,7 @@ public class DayMenuHandler : MonoBehaviour
      **/
     public void Back()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
     /** EndDay()
      * Ends the day and go to the next day 
