@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameOverMenuHandler : MonoBehaviour {
     Clock clock;
     Player player;
     public Text results;
+	public AudioMixerSnapshot gameover;
     // Use this for initialization
     void Start () {
         //get reference to the clock and player objects
         clock = (Clock)GameObject.FindGameObjectWithTag("Clock").GetComponent<Clock>();
         player = (Player)GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
+		gameover.TransitionTo (.05f);
+
  
         //see if anything is unlocked
         UnlockRewards unlocking = new UnlockRewards();

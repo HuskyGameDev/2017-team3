@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenuHandler : MonoBehaviour {
+	public AudioMixerSnapshot normal;
     private const string ADDRESS = "savedData";
     // Use this for initialization
     void Start () {
+		normal.TransitionTo (.01f);
 		//TODO load previous game data
 	}
 	
