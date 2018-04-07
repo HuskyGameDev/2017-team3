@@ -1539,6 +1539,7 @@ GameObject:
   - component: {fileID: 844912273}
   - component: {fileID: 844912275}
   - component: {fileID: 844912274}
+  - component: {fileID: 844912276}
   m_Layer: 5
   m_Name: Homework Bar Background
   m_TagString: Untagged
@@ -1559,11 +1560,11 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 510, y: -223}
+  m_AnchorMin: {x: 0.7558696, y: 0.20915154}
+  m_AnchorMax: {x: 0.7558696, y: 0.20915154}
+  m_AnchoredPosition: {x: -153, y: 16}
   m_SizeDelta: {x: 150, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &844912274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,6 +1598,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 844912272}
+--- !u!225 &844912276
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844912272}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &884470962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1620,7 @@ GameObject:
   - component: {fileID: 884470965}
   - component: {fileID: 884470964}
   - component: {fileID: 884470966}
+  - component: {fileID: 884470967}
   m_Layer: 5
   m_Name: Homework Text
   m_TagString: Untagged
@@ -1628,9 +1641,9 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 455, y: -230}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -695, y: 182}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884470964
@@ -1684,6 +1697,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 884470964}
+--- !u!225 &884470967
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884470962}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &937389282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1718,7 @@ GameObject:
   - component: {fileID: 937389283}
   - component: {fileID: 937389285}
   - component: {fileID: 937389284}
+  - component: {fileID: 937389286}
   m_Layer: 5
   m_Name: Stress Bar Background
   m_TagString: Untagged
@@ -1714,11 +1739,11 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 510, y: -190}
+  m_AnchorMin: {x: 0.7558696, y: 0.20915154}
+  m_AnchorMax: {x: 0.7558696, y: 0.20915154}
+  m_AnchoredPosition: {x: -153, y: 49}
   m_SizeDelta: {x: 150, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &937389284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,6 +1777,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937389282}
+--- !u!225 &937389286
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937389282}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &963060400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1799,7 @@ GameObject:
   - component: {fileID: 963060403}
   - component: {fileID: 963060402}
   - component: {fileID: 963060404}
+  - component: {fileID: 963060405}
   m_Layer: 5
   m_Name: Exhaustion Text
   m_TagString: Untagged
@@ -1783,9 +1820,9 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 455, y: -164}
+  m_AnchorMin: {x: 0.7558696, y: 0.20915154}
+  m_AnchorMax: {x: 0.7558696, y: 0.20915154}
+  m_AnchoredPosition: {x: -133, y: 75}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963060402
@@ -1839,6 +1876,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 963060402}
+--- !u!225 &963060405
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963060400}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1026101620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 509, y: -171}
+  m_AnchoredPosition: {x: 509, y: -172}
   m_SizeDelta: {x: 476.2, y: 200.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633865057
@@ -3138,6 +3186,7 @@ GameObject:
   - component: {fileID: 1783693807}
   - component: {fileID: 1783693806}
   - component: {fileID: 1783693808}
+  - component: {fileID: 1783693809}
   m_Layer: 5
   m_Name: Exhaustion Bar Foreground
   m_TagString: Untagged
@@ -3207,6 +3256,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06c96ae0de57564b950531a40907f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1783693809
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783693804}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1785776700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,6 +3354,7 @@ GameObject:
   - component: {fileID: 1818291277}
   - component: {fileID: 1818291276}
   - component: {fileID: 1818291278}
+  - component: {fileID: 1818291279}
   m_Layer: 5
   m_Name: Stress Text
   m_TagString: Untagged
@@ -3314,9 +3375,9 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 455, y: -197}
+  m_AnchorMin: {x: 0.7558696, y: 0.20915154}
+  m_AnchorMax: {x: 0.7558696, y: 0.20915154}
+  m_AnchoredPosition: {x: -134, y: 42}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818291276
@@ -3370,6 +3431,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 1818291276}
+--- !u!225 &1818291279
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818291274}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1858718122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3589,7 @@ GameObject:
   - component: {fileID: 1909316683}
   - component: {fileID: 1909316682}
   - component: {fileID: 1909316681}
+  - component: {fileID: 1909316684}
   m_Layer: 5
   m_Name: Stress Bar Foreground
   m_TagString: Untagged
@@ -3586,6 +3659,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909316679}
+--- !u!225 &1909316684
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909316679}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1942091899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,6 +3828,7 @@ GameObject:
   - component: {fileID: 2025950542}
   - component: {fileID: 2025950544}
   - component: {fileID: 2025950543}
+  - component: {fileID: 2025950545}
   m_Layer: 5
   m_Name: Exhaustion Bar Background
   m_TagString: Untagged
@@ -3764,11 +3849,11 @@ RectTransform:
   m_Father: {fileID: 344011399}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 510, y: -157}
+  m_AnchorMin: {x: 0.7558696, y: 0.20915154}
+  m_AnchorMax: {x: 0.7558696, y: 0.20915154}
+  m_AnchoredPosition: {x: -153, y: 83}
   m_SizeDelta: {x: 150, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2025950543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3802,6 +3887,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025950541}
+--- !u!225 &2025950545
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2025950541}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2133759611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +3909,7 @@ GameObject:
   - component: {fileID: 2133759615}
   - component: {fileID: 2133759614}
   - component: {fileID: 2133759613}
+  - component: {fileID: 2133759616}
   m_Layer: 5
   m_Name: Homework Bar Foreground
   m_TagString: Untagged
@@ -3882,6 +3979,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133759611}
+--- !u!225 &2133759616
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133759611}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2141532060
 GameObject:
   m_ObjectHideFlags: 0
