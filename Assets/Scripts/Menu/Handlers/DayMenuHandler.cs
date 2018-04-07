@@ -39,7 +39,7 @@ public class DayMenuHandler : MonoBehaviour
         startDay = clock.day;
         if (!clock.endless && clock.day > 75)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
         if (player.startDayLate)
         {
