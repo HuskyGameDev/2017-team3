@@ -18,4 +18,12 @@ public class ImageSelector : MonoBehaviour {
 	void Update () {
 		
 	}
+
+   public void SelectPlayer(int s)
+    {
+        switch (s)
+        {
+
+        }
+    }
 }
