@@ -207,7 +207,7 @@ public class PlayerMenuHandler : MonoBehaviour {
         player.family = 10;
         player.friends = 10;
         player.stress = 10;
-        player.money = (Random.value * 200000)/100.0f;
+        player.money = (int)((Random.value * 200000)/100.0f);
         switch (chosenClass)
         {
             case 1:
