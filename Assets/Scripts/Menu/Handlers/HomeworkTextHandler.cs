@@ -12,12 +12,12 @@ public class HomeworkTextHandler : MonoBehaviour {
 	void Start ()
     {
         player = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
-        txt.text = player.homework.ToString() + "/200";
+        txt.text = player.homework.ToString() + "/1000";
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        txt.text = player.homework.ToString() + "/200";
+        txt.text = player.homework.ToString() + "/1000";
     }
 }

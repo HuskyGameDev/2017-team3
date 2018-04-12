@@ -11,11 +11,11 @@ public class StressTextHandler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<Player>();
-        txt.text = player.stress.ToString() + "/100";
+        txt.text = player.stress.ToString() + "/1000";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        txt.text = player.stress.ToString() + "/100";
+        txt.text = player.stress.ToString() + "/1000";
     }
 }

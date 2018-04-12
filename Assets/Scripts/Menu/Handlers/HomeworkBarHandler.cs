@@ -15,6 +15,6 @@ public class HomeworkBarHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        transform.localScale = new Vector3(((float)player.homework / 200), 1, 1);
+        transform.localScale = new Vector3(((float)player.homework / 1000), 1, 1);
     }
 }

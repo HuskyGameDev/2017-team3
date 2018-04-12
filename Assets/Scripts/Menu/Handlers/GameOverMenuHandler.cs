@@ -26,10 +26,10 @@ public class GameOverMenuHandler : MonoBehaviour {
         //display results. 
         //TODO Change these into progress bars
         results.text = "Results for " + player.PlayerName + ":\nStress: " + player.stress.ToString()
-            + "/100\nHomework: " + player.homework.ToString()
-            + "/200\nMoney: $" + player.money.ToString()
+            + "/1000\nHomework: " + player.homework.ToString()
+            + "/1000\nMoney: $" + player.money.ToString()
             + "\nStrength: " + player.strength.ToString()
-            + "/100\nDexterity: " + player.dexterity.ToString()
+            + "/1000\nDexterity: " + player.dexterity.ToString()
             + "/100\nConstitution: "+player.constitution.ToString()
             + "/100\nWisdom: " +player.wisdom.ToString()
             + "/100\nIntelligence: "+player.intelligence.ToString()

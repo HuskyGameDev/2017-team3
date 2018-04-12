@@ -15,6 +15,6 @@ public class StressBarHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        transform.localScale = new Vector3(((float)player.stress / 100), 1, 1);
+        transform.localScale = new Vector3(((float)player.stress / 1000), 1, 1);
     }
 }

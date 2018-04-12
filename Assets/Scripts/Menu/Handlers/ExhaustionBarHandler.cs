@@ -15,6 +15,6 @@ public class ExhaustionBarHandler : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        transform.localScale = new Vector3(((float)player.exhaustion / 100), 1, 1);
+        transform.localScale = new Vector3(((float)player.exhaustion / 1000), 1, 1);
     }
 }

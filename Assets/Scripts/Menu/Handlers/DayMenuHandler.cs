@@ -121,7 +121,7 @@ public class DayMenuHandler : MonoBehaviour
         TempBars.text = player.PlayerName + "\nMoney: " + player.money + "\nExhaustion: " + /*player.exhaustion*/"" + "\nStress: " + /*player.stress*/"" + "\nHomework: " + /*player.homework*/"";
         if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
         if (player.stress > 100)
         {
