@@ -118,7 +118,7 @@ public class DayMenuHandler : MonoBehaviour
     void Update()
     {
         TempClock.text = "Day: " + clock.day + "\n Time:" + clock.time;
-        TempBars.text = player.PlayerName + "\nMoney: " + player.money + "\nExhaustion: " + player.exhaustion + "\nStress: " + player.stress + "\nHomework: " + player.homework;
+        TempBars.text = player.PlayerName + "\nMoney: " + player.money + "\nExhaustion: " + /*player.exhaustion*/"" + "\nStress: " + /*player.stress*/"" + "\nHomework: " + /*player.homework*/"";
         if (player.homework >= 200 || (player.stress >= 100 && player.exhaustion >= 100))
         {
             SceneManager.LoadScene(4);
