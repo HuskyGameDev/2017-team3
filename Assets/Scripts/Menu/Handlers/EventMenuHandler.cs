@@ -13,6 +13,7 @@ public class EventMenuHandler : MonoBehaviour {
     public Button choice4;
     public Text eventDescription;
     public Text choiceDescription;
+    public Text eventName;
     Clock clock;
     Player player;
     Event todaysEvent;
@@ -32,10 +33,12 @@ public class EventMenuHandler : MonoBehaviour {
         {
             choice1.GetComponentInChildren<Text>().text = "Error, Default choice only";
             eventDescription.text = "Error, Default event";
+            eventName.text = "Error, Default event";
         }
         else
         {
             eventDescription.text = todaysEvent.getDescription();
+            eventName.text = todaysEvent.getName();
             List<Options> eventOptions = todaysEvent.eventChosen();
             bool[] results;
             string badStats;

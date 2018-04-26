@@ -81,7 +81,8 @@ public class Event_Parser{
         //Debug.Log(line);
         //remove "e-{" and read name field
         line = line.Remove(0, 3);
-        string name = line.Substring(0, line.IndexOf('{'));
+        string name = line.Substring(0, line.IndexOf('}'));
+        //name = name.Substring(0, name.Length)
 
         //remove "*}{" and read description field
         line = line.Remove(0, line.IndexOf('{') + 1);
