@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 1886527899}
-  ClickSound: {fileID: 8300000, guid: 66f2c36020d0f468cbb257da225c7429, type: 3}
+  ClickSound: {fileID: 8300000, guid: 4e51267049349475b859bc9d3ab1dccf, type: 3}
 --- !u!1 &1427408716
 GameObject:
   m_ObjectHideFlags: 0
